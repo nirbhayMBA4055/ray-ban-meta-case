@@ -144,6 +144,362 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
   .brand-divider{height:25px}
   .brand-context{display:none}
 }
+
+/* ===== INTEGRATED GROWTH ENGINES: SOCIAL O2O + PRESCRIPTION LENS ===== */
+.growth-engine-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:11px}
+.growth-engine{background:#fff;border:1px solid var(--line);border-radius:7px;padding:15px;position:relative;overflow:hidden}
+.growth-engine:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+.growth-engine.lens:before{background:var(--green)}
+.growth-engine .ge-kicker{font-size:8px;letter-spacing:1.1px;color:var(--blue);font-weight:850}
+.growth-engine.lens .ge-kicker{color:var(--green)}
+.growth-engine h3{font-size:15px;margin:5px 0 5px}
+.growth-engine p{font-size:9px!important;color:var(--muted)!important;line-height:1.5;margin:0 0 9px!important}
+.ge-flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.ge-flow span{font-size:8px;font-weight:800;background:#f5f8f9;border:1px solid #dfe6e9;border-radius:4px;padding:5px 6px}
+.ge-flow i{font-style:normal;color:#94a2a9;font-size:10px}
+.ge-measure{margin-top:9px;padding-top:8px;border-top:1px solid #edf0f1;font-size:8px;color:#5d6b73;line-height:1.45}
+.ge-measure b{color:var(--ink)}
+.growth-funnel{margin-top:11px;background:#101820;color:#fff;border-radius:7px;padding:15px}
+.growth-funnel h3{font-size:11px;margin:0 0 9px}
+.growth-funnel p{font-size:8px;color:#b9c5cb;line-height:1.45;margin:0 0 10px}
+.gf-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;align-items:center}
+.gf-step{background:#182630;border:1px solid #2f424d;border-radius:5px;padding:8px 5px;text-align:center;min-height:54px;display:flex;flex-direction:column;justify-content:center}
+.gf-step b{font-size:8px;color:#fff}
+.gf-step span{font-size:7px;color:#8fa1aa;margin-top:3px;line-height:1.25}
+.gf-arrow{text-align:center;color:#5bb4ff;font-size:13px}
+.pilot-badge{display:inline-block;margin-top:8px;padding:4px 7px;border-radius:99px;background:#fff8e9;border:1px solid #dfc98e;color:#9b711f;font-size:7px;font-weight:850;letter-spacing:.5px}
+@media(max-width:850px){.growth-engine-grid{grid-template-columns:1fr}.gf-row{grid-template-columns:1fr}.gf-arrow{transform:rotate(90deg);height:12px}}
+
+
+/* ===== DEDICATED SOCIAL DISCOVERY VIEW ===== */
+.social-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;background:#101820;color:#fff;border-radius:8px;padding:24px;margin-bottom:11px;overflow:hidden;position:relative}
+.social-hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-90px;top:-120px;background:radial-gradient(circle,rgba(91,180,255,.22),transparent 68%)}
+.social-hero-copy{position:relative;z-index:1}
+.social-kicker{font-size:8px;letter-spacing:1.7px;color:#5bb4ff;font-weight:850;text-transform:uppercase}
+.social-hero h2{font-size:30px;line-height:1.05;letter-spacing:-1.3px;margin:7px 0 9px;max-width:650px}
+.social-hero h2 span{color:#5bb4ff}
+.social-hero p{font-size:10px;line-height:1.55;color:#b9c5cb;max-width:650px;margin:0}
+.social-hero-side{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+.social-funnel-mini{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:center}
+.social-funnel-mini div{background:#182630;border:1px solid #314550;border-radius:6px;padding:10px 8px;text-align:center;min-width:78px}
+.social-funnel-mini b{display:block;font-size:8px}.social-funnel-mini span{display:block;font-size:7px;color:#9eb0b9;margin-top:3px}.social-funnel-mini i{font-style:normal;color:#5bb4ff}
+.social-format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.social-format{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:15px;min-height:185px;display:flex;flex-direction:column}
+.social-format .num{font-size:21px;color:var(--blue);font-weight:850}
+.social-format h3{font-size:13px;margin:3px 0 5px}
+.social-format p{font-size:9px!important;color:#687780!important;line-height:1.5;margin:0!important}
+.social-format .cta-box{margin-top:auto;background:#f5f8f9;border:1px solid #e1e7ea;border-radius:5px;padding:8px;font-size:8px;color:#52616a}
+.social-format .cta-box b{display:block;color:var(--blue);margin-bottom:3px}
+.social-o2o{margin-top:10px;background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:15px}
+.social-o2o-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-end;margin-bottom:10px}
+.social-o2o-head h3{font-size:14px;margin:0}.social-o2o-head span{font-size:8px;color:#78868e}
+.o2o-flow{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;align-items:center}
+.o2o-step{background:#f7fafb;border:1px solid #dfe6e9;border-radius:5px;padding:9px 5px;text-align:center;min-height:60px;display:flex;flex-direction:column;justify-content:center}
+.o2o-step b{font-size:8px}.o2o-step span{font-size:7px;color:#738189;line-height:1.35;margin-top:3px}.o2o-arrow{text-align:center;color:var(--blue);font-size:13px}
+.social-measure{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
+.social-measure div{background:#101820;color:#fff;border-radius:5px;padding:10px}.social-measure b{font-size:8px;color:#5bb4ff;display:block}.social-measure span{font-size:8px;color:#b9c5cb;line-height:1.4;display:block;margin-top:3px}
+.social-lens-link{margin-top:10px;background:#eef6fb;border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:12px 14px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.social-lens-link b{font-size:9px}.social-lens-link span{font-size:8px;color:#617079;line-height:1.45}
+.social-lens-link button{border:1px solid #a8d7c6;background:#fff;border-radius:5px;padding:7px 10px;color:var(--green);font-size:8px;font-weight:850;white-space:nowrap;cursor:pointer}
+@media(max-width:900px){.social-hero{grid-template-columns:1fr}.social-format-grid{grid-template-columns:1fr}.o2o-flow{grid-template-columns:1fr}.o2o-arrow{transform:rotate(90deg);height:10px}.social-measure{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.social-measure{grid-template-columns:1fr}.social-lens-link{display:block}.social-lens-link button{margin-top:8px}}
+
+
+/* ===== FULL STRATEGY PLAYBOOK ===== */
+.playbook-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.play-card{background:#fff;border:1px solid #d5dbde;border-radius:8px;padding:17px;box-shadow:0 5px 20px rgba(16,24,32,.035)}
+.play-card.full{grid-column:1/-1}
+.play-card .pk{font-size:8px;letter-spacing:1.5px;color:var(--blue);font-weight:850;text-transform:uppercase}
+.play-card h3{font-size:17px;letter-spacing:-.45px;margin:5px 0 7px}
+.play-card p{font-size:10px!important;line-height:1.55;color:#617079}
+.play-card ul{margin:8px 0 0;padding-left:17px}.play-card li{font-size:9px;line-height:1.55;color:#52616a;margin:3px 0}
+.play-card details{border-top:1px solid #e4e8ea;margin-top:11px;padding-top:9px}.play-card summary{font-size:9px;font-weight:800;cursor:pointer;color:var(--ink)}
+.play-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:8px}
+.play-table th{background:#101820;color:#fff;text-align:left;padding:8px;font-size:8px}
+.play-table td{border:1px solid #dce2e5;padding:8px;vertical-align:top;line-height:1.45;color:#52616a}
+.play-table td:first-child{font-weight:800;color:#18242d}
+.play-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.pillar-card{border:1px solid #d9e0e3;border-radius:6px;padding:12px;background:#f8fafb}
+.pillar-card .n{font-size:20px;font-weight:850;color:var(--blue)}.pillar-card h4{font-size:11px;margin:3px 0 5px}.pillar-card p{font-size:8px!important;margin:0;line-height:1.5}
+.pillar-card details{margin-top:7px;border-top:1px solid #e1e6e8;padding-top:7px}.pillar-card summary{font-size:8px;font-weight:800;cursor:pointer}
+.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
+.roadmap-card{background:#101820;color:#fff;border-radius:6px;padding:12px;min-height:130px}.roadmap-card .days{color:#5bb4ff;font-size:8px;font-weight:850;letter-spacing:1px}.roadmap-card h4{font-size:10px;margin:5px 0}.roadmap-card p{font-size:8px!important;color:#b9c5cb!important;line-height:1.5;margin:0}
+.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:10px}
+.kpi-box{border:1px solid #d7dfe2;border-radius:6px;padding:10px;background:#fff}.kpi-box b{font-size:8px;color:var(--blue);display:block}.kpi-box strong{font-size:15px;display:block;margin:3px 0}.kpi-box span{font-size:7px;color:#687780;line-height:1.4}
+.source-note{background:#eef6fb;border-left:3px solid var(--blue);padding:10px 12px;border-radius:0 6px 6px 0;font-size:8px;color:#52616a;line-height:1.5;margin-top:10px}
+@media(max-width:1000px){.playbook-grid{grid-template-columns:1fr}.playbook-grid .full{grid-column:auto}.play-pillars{grid-template-columns:1fr 1fr}.roadmap-grid{grid-template-columns:1fr 1fr}.kpi-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.play-pillars,.roadmap-grid,.kpi-grid{grid-template-columns:1fr}}
+
+
+/* ===== READABILITY PASS =====
+   Keep the existing Ray-Ban / Channelplay visual language,
+   but increase body copy, spacing and contrast for presentation use.
+*/
+:root{
+  --read-body:13px;
+  --read-small:11px;
+  --read-label:10px;
+}
+body{
+  font-size:var(--read-body);
+  line-height:1.55;
+}
+.main{
+  font-size:var(--read-body);
+}
+.view .lead,
+.lead{
+  font-size:14px !important;
+  line-height:1.6 !important;
+  max-width:900px;
+}
+.view .top{
+  margin-bottom:18px !important;
+}
+.eyebrow,
+.pk,
+.social-kicker{
+  font-size:10px !important;
+  letter-spacing:1.4px !important;
+}
+.title{
+  font-size:34px !important;
+  line-height:1.08 !important;
+}
+.subhead h3,
+.section h3{
+  font-size:18px !important;
+}
+.subhead span{
+  font-size:10px !important;
+}
+p,
+li,
+td,
+th,
+label,
+span{
+  line-height:1.5;
+}
+.play-card p,
+.play-card li,
+.pillar-card p,
+.social-format p,
+.social-format .cta-box,
+.social-o2o-head span,
+.social-lens-link span,
+.social-measure span{
+  font-size:11px !important;
+  line-height:1.55 !important;
+}
+.play-card h3{
+  font-size:18px !important;
+}
+.play-card{
+  padding:20px !important;
+}
+.play-card ul{
+  padding-left:20px !important;
+  margin-top:10px !important;
+}
+.play-card li{
+  margin:5px 0 !important;
+}
+.play-card details{
+  margin-top:14px !important;
+  padding-top:12px !important;
+}
+.play-card summary,
+.pillar-card summary{
+  font-size:11px !important;
+  padding:4px 0;
+}
+.play-table{
+  font-size:11px !important;
+  margin-top:14px !important;
+}
+.play-table th{
+  font-size:10px !important;
+  padding:11px !important;
+}
+.play-table td{
+  padding:11px !important;
+  line-height:1.55 !important;
+}
+.pillar-card{
+  padding:16px !important;
+}
+.pillar-card .n{
+  font-size:24px !important;
+}
+.pillar-card h4{
+  font-size:14px !important;
+  line-height:1.25 !important;
+}
+.roadmap-card{
+  padding:16px !important;
+  min-height:155px !important;
+}
+.roadmap-card .days{
+  font-size:10px !important;
+}
+.roadmap-card h4{
+  font-size:13px !important;
+  line-height:1.3 !important;
+}
+.roadmap-card p{
+  font-size:10.5px !important;
+  line-height:1.55 !important;
+}
+.kpi-box{
+  padding:14px !important;
+}
+.kpi-box b{
+  font-size:10px !important;
+}
+.kpi-box strong{
+  font-size:20px !important;
+}
+.kpi-box span{
+  font-size:10px !important;
+  line-height:1.5 !important;
+}
+.source-note{
+  font-size:11px !important;
+  line-height:1.55 !important;
+  padding:13px 15px !important;
+}
+.social-hero h2{
+  font-size:34px !important;
+}
+.social-hero p{
+  font-size:12px !important;
+  line-height:1.6 !important;
+}
+.social-format{
+  padding:18px !important;
+  min-height:220px !important;
+}
+.social-format h3{
+  font-size:16px !important;
+}
+.social-format .num{
+  font-size:25px !important;
+}
+.social-format p{
+  font-size:11px !important;
+}
+.social-format .cta-box{
+  padding:10px !important;
+}
+.social-o2o{
+  padding:18px !important;
+}
+.social-o2o-head h3{
+  font-size:17px !important;
+}
+.o2o-step{
+  padding:11px 7px !important;
+  min-height:72px !important;
+}
+.o2o-step b{
+  font-size:9px !important;
+}
+.o2o-step span{
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+.social-measure{
+  gap:9px !important;
+}
+.social-measure div{
+  padding:13px !important;
+}
+.social-measure b{
+  font-size:9px !important;
+}
+.social-measure span{
+  font-size:10px !important;
+}
+.social-lens-link{
+  padding:15px 17px !important;
+}
+.social-lens-link b{
+  font-size:11px !important;
+}
+.social-lens-link span{
+  font-size:10px !important;
+}
+.badge{
+  font-size:10px !important;
+}
+.btn{
+  font-size:11px !important;
+  padding:9px 13px !important;
+}
+.side{
+  font-size:12px !important;
+}
+.side a,
+.side button{
+  font-size:12px !important;
+  line-height:1.3 !important;
+  padding:10px 12px !important;
+}
+.tabs button{
+  font-size:10px !important;
+  padding:8px 11px !important;
+}
+
+/* Give dense tables a little breathing room on smaller screens */
+@media(max-width:1000px){
+  .title{font-size:30px !important}
+  .playbook-grid{gap:14px !important}
+  .play-pillars{gap:12px !important}
+}
+@media(max-width:650px){
+  .title{font-size:27px !important}
+  .view .lead,.lead{font-size:13px !important}
+  .play-table{display:block;overflow-x:auto}
+}
+
+
+/* ===== PROGRAM TRENDS CHART FIX ===== */
+.chart .bars .bar{cursor:pointer;position:relative;min-height:6px;transition:height .2s ease,opacity .2s ease}
+.chart .bars .bar:hover{opacity:.78}
+.chart:after{content:attr(data-selected-metric);position:absolute;right:12px;top:8px;font-size:10px;color:#7c898f}
+#weeklyTable td,#weeklyTable th{white-space:nowrap}
+#weeklyTable td:first-child{font-weight:800;color:#18242d}
+
+
+/* ===== PROMOTER CHAMPIONS / PEER-TO-PEER ACADEMY ===== */
+.champ-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;background:#101820;color:#fff;border-radius:9px;padding:24px;margin-bottom:14px;position:relative;overflow:hidden}
+.champ-hero:after{content:"";position:absolute;width:360px;height:360px;right:-120px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(23,105,224,.24),transparent 68%)}
+.champ-copy,.champ-loop{position:relative;z-index:1}
+.champ-kicker{font-size:10px;letter-spacing:1.5px;color:#5bb4ff;font-weight:850;text-transform:uppercase}
+.champ-hero h2{font-size:32px;line-height:1.08;margin:7px 0 9px;letter-spacing:-1px}
+.champ-hero h2 span{color:#5bb4ff}
+.champ-hero p{font-size:12px;line-height:1.6;color:#c1ccd2;margin:0;max-width:650px}
+.champ-loop{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+.champ-node{background:#182630;border:1px solid #344a56;border-radius:7px;padding:12px 10px;min-width:95px;text-align:center}
+.champ-node b{font-size:9px;display:block}.champ-node span{font-size:8px;color:#aab8bf;display:block;margin-top:4px;line-height:1.35}.champ-arrow{color:#5bb4ff;font-size:16px}
+.champ-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}
+.champ-card{background:#fff;border:1px solid #d5dbde;border-radius:8px;padding:18px}
+.champ-card h3{font-size:17px;margin:0 0 8px}.champ-card p{font-size:11px!important;line-height:1.55!important;color:#5f6d75!important}
+.champ-card ul{padding-left:20px;margin:8px 0}.champ-card li{font-size:10.5px;line-height:1.55;margin:4px 0;color:#4f5d65}
+.champ-role{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:10px}
+.champ-role div{background:#f7fafb;border:1px solid #dce4e7;border-radius:6px;padding:11px}
+.champ-role b{font-size:9px;color:#1769e0;display:block}.champ-role span{font-size:9px;color:#5f6d75;line-height:1.4;display:block;margin-top:3px}
+.champ-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;align-items:center;margin-top:12px}
+.champ-step{background:#f7fafb;border:1px solid #dce4e7;border-radius:6px;padding:12px 8px;text-align:center;min-height:78px;display:flex;flex-direction:column;justify-content:center}
+.champ-step b{font-size:9px}.champ-step span{font-size:8px;color:#687780;line-height:1.4;margin-top:4px}.champ-flow .arr{text-align:center;color:#1769e0}
+.champ-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.champ-metric{background:#101820;color:#fff;border-radius:6px;padding:13px}.champ-metric b{font-size:9px;color:#5bb4ff;display:block}.champ-metric strong{font-size:16px;display:block;margin:3px 0}.champ-metric span{font-size:8px;color:#b9c5cb;line-height:1.4}
+.champ-90{margin-top:12px;background:#eef6fb;border-left:3px solid #1769e0;border-radius:0 7px 7px 0;padding:14px 16px}
+.champ-90 b{font-size:10px}.champ-90 p{font-size:10px!important;margin:4px 0 0!important}
+@media(max-width:900px){.champ-hero,.champ-grid{grid-template-columns:1fr}.champ-flow{grid-template-columns:1fr}.champ-flow .arr{transform:rotate(90deg);height:10px}.champ-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.champ-role,.champ-metrics{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -185,7 +541,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
     <h1>The program is scaling activity.<br><em>The next 90 days should convert that activity into repeatable store performance.</em></h1>
     <p>Meaningful growth is visible across demonstrations, enquiries, units and revenue. The open question is what explains store-level variation — and which interventions should be tested before capacity is expanded.</p>
     <div class="hero-actions">
-      <button class="btn primary" onclick="show('funnel')">Explore the funnel →</button>
+      <button class="btn primary" onclick="show('funnel')">Explore the funnel →</button><button class="btn" onclick="show('social')">Explore Social Discovery →</button>
       <button class="btn" onclick="show('stores')">Open Store Lab →</button>
       <button class="btn" onclick="show('plan')">See 90-day plan →</button>
     </div>
@@ -342,6 +698,363 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
   </section>
 
   
+
+
+<section class="view" id="playbook">
+  <div class="top">
+    <div>
+      <div class="eyebrow">MASTER OPERATIONAL STRATEGY · FULL SOURCE PLAYBOOK</div>
+      <div class="title">Strategy Playbook</div>
+      <div class="lead">The complete strategy architecture: diagnostic verdict, analytical priorities, six execution pillars, detailed interventions, prescription proposition, 90-day milestones and target KPIs.</div>
+    </div>
+    <div class="badge">31 STORES · 48 POSITIONS · 6 PILLARS</div>
+  </div>
+
+  <div class="source-note">
+    <b>PLAYBOOK SCOPE:</b> This section intentionally preserves the strategy document's proposed targets, mechanics and terminology. Proposed targets are shown as <b>playbook targets</b>; they are not presented as already-achieved case results.
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>1 · Program overview & diagnostic verdict</h3><span>What the strategy document says the operation must solve</span></div>
+    <div class="playbook-grid">
+      <div class="play-card">
+        <div class="pk">Operating footprint</div>
+        <h3>31 stores · 48 approved promoter positions</h3>
+        <p>Promoters are deployed across Premium Malls, High Street Opticians and Consumer Electronics outlets to drive product awareness, live demonstrations and unit sales.</p>
+        <ul>
+          <li>Top-line volume in the playbook: 92 units sold in Week 1 → 111 in Week 6.</li>
+          <li>Demo volume: 1,184 in Week 1 → 1,476 in Week 6.</li>
+          <li>The playbook frames the issue as moving from assisted-sales activity toward category building.</li>
+        </ul>
+      </div>
+      <div class="play-card">
+        <div class="pk">Diagnostic verdict</div>
+        <h3>Activity is scaling; category-building mechanisms need strengthening</h3>
+        <p>According to the playbook, category building requires clearer daily utility, point-of-sale app activation, sticky optical-staff referral loops and stronger customer retention.</p>
+        <details><summary>Core friction points</summary>
+          <ul>
+            <li>~7.5% overall demo-to-sale conversion in the playbook.</li>
+            <li>Channel performance disparity between High Street optical stores and Premium Malls.</li>
+            <li>Promoter productivity varies by recruitment background.</li>
+            <li>More than 20% of buyers are described as leaving without companion-app pairing/activation.</li>
+            <li>Regular store staff are described as treating promoters as third-party vendors, limiting referrals.</li>
+            <li>Management coverage is described as missing 9–13 store visits weekly.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <table class="play-table">
+      <tr><th>Operational metric</th><th>Playbook current state</th><th>Strategic implication</th></tr>
+      <tr><td>Weekly demo volume</td><td>1,184 → 1,476</td><td>High activity; playbook flags reliance on feature-dumping/spec-sheet selling.</td></tr>
+      <tr><td>Demo-to-sale conversion</td><td>~7.5% average</td><td>Low conversion efficiency; missed customer-intent mapping.</td></tr>
+      <tr><td>High Street conversion</td><td>~12% · S08 Bengaluru: 17 sales / 142 demos</td><td>High-intent optical buyers seeking frame upgrades convert efficiently.</td></tr>
+      <tr><td>Premium Mall conversion</td><td>~4.3% · S03 Delhi: 8 sales / 185 demos</td><td>High casual footfall; lower purchase intent.</td></tr>
+      <tr><td>Top promoter yield</td><td>5.1–6.1 units/week</td><td>Smartphone / Premium Retail background associated with higher productivity in the playbook.</td></tr>
+      <tr><td>Bottom promoter yield</td><td>2.1–2.8 units/week</td><td>Consumer Tech background described as relying more on static specification lists.</td></tr>
+      <tr><td>App activation gap</td><td>&gt;20% non-activated at POS</td><td>Playbook labels this a potential “Drawer Effect” / product-abandonment risk.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>2 · Analytical & diagnostic priorities</h3><span>Sequence in the source: 3 → 4 → 2 → 1</span></div>
+    <div class="playbook-grid">
+      <div class="play-card">
+        <div class="pk">Priority 1 · Parameter 3</div><h3>Customer & Funnel Friction</h3>
+        <p>Code qualitative feedback into the three dealbreaker buckets specified in the playbook and map POS app installation drop-offs.</p>
+        <ul><li>Price / Financing</li><li>Prescription Compatibility</li><li>Privacy</li><li>Map where app installation drops during the purchase journey.</li></ul>
+      </div>
+      <div class="play-card">
+        <div class="pk">Priority 2 · Parameter 4</div><h3>Financial Viability & Store CPA</h3>
+        <p>Calculate store-level Cost Per Acquisition using promoter fixed compensation, commissions and retail overhead.</p>
+      </div>
+      <div class="play-card">
+        <div class="pk">Priority 3 · Parameter 2</div><h3>Store & Channel Dynamics</h3>
+        <p>Correlate store manager ratings with unit sales and track referral volumes from regular optical staff to promoters.</p>
+      </div>
+      <div class="play-card">
+        <div class="pk">Priority 4 · Parameter 1</div><h3>Talent Profiling & Sourcing</h3>
+        <p>Cross-tab recruitment channels against 60-day promoter retention rates and weekly unit throughput.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>3 · The six execution pillars</h3><span>Complete strategy architecture</span></div>
+    <div class="play-pillars">
+      <div class="pillar-card">
+        <div class="n">01</div><h4>Adaptive & Localized Pitching</h4>
+        <p>Replace generic corporate spec sheets with three modular, scenario-based demos tailored to store format and regional customer profile.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>High Street Opticians:</b> prescription wearers / frame buyers → prescription & everyday utility, frame ergonomics, prescription compatibility, open-ear commuting audio.</p>
+          <p><b>Premium Malls:</b> lifestyle/fashion shoppers and travelers → hands-free photo/video capture, instant social sharing and styling.</p>
+          <p><b>Tech Hubs:</b> tech enthusiasts / early adopters → Meta AI & productivity, hands-free voice commands, visual translation and AI queries.</p>
+          <p><b>Qualifying question:</b> “Are you looking for everyday prescription/sunglass utility, or hands-free technology for travel and daily capture?”</p>
+        </details>
+      </div>
+      <div class="pillar-card">
+        <div class="n">02</div><h4>White-Glove POS Setup & Retention Nudges</h4>
+        <p>Eliminate the activation gap with a 5-minute concierge setup before checkout, followed by a 14-day feature drip.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>Checkout checklist:</b> pair Meta View; configure default voice controls; take a test photo/video and transfer it live; play a 10-second open-ear audio track.</p>
+          <p><b>Day 1:</b> hands-free photo trial. <b>Day 3:</b> voice assistance during commutes. <b>Day 7:</b> hands-free WhatsApp/Instagram video calls. <b>Day 10:</b> custom touch-control shortcuts.</p>
+          <p><b>Usage trigger:</b> if no AI query occurs in 3 days, send the specified Meta AI discovery nudge.</p>
+        </details>
+      </div>
+      <div class="pillar-card">
+        <div class="n">03</div><h4>Real-Time Dynamic Performance Dashboard</h4>
+        <p>Replace static weekly review packs with store-level tracking and action triggers.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>Conversion quality:</b> demos → enquiries → units sold; retrain if conversion drops below 8%.</p>
+          <p><b>POS activation:</b> % of sold units paired before leaving; alert if activation falls below 90%.</p>
+          <p><b>Promoter productivity:</b> sales yield per active hour/day; adjust shifts when low-traffic hours waste time.</p>
+          <p><b>Store referrals:</b> leads passed by optical staff; run a 5-minute morning refresher if referrals hit zero.</p>
+        </details>
+      </div>
+      <div class="pillar-card">
+        <div class="n">04</div><h4>Immediate Sales Acceleration Levers</h4>
+        <p>Change incentives, staffing windows, price framing and trial access to attack conversion friction.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>Incentives:</b> 1.5× commission multiplier for promoters above 12% conversion; ₹200–₹300 micro-bonus for successful store-optician referrals.</p>
+          <p><b>Peak shifts:</b> Thursday–Sunday, 3 PM–9 PM; temporary dual coverage during high-volume High Street weekend rushes.</p>
+          <p><b>Purchase friction:</b> no-cost EMI framing and immediate vision testing with host opticians when prescription questions arise.</p>
+          <p><b>VIP trials:</b> 3-km geotargeted Instagram ads offering 10-minute reserved VIP trials via WhatsApp.</p>
+        </details>
+      </div>
+      <div class="pillar-card">
+        <div class="n">05</div><h4>Social Media Content & O2O Analytics</h4>
+        <p>Connect short-form digital content to physical store visits through trackable geo-targeted CTAs.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>Flow:</b> Social Media Byte → UTM-tracked CTA → geofenced VIP WhatsApp booking → in-store QR scan → POS sale & app pairing.</p>
+          <p><b>Customer interactions:</b> 15–30 sec first-impression reactions → VIP trial booking.</p>
+          <p><b>POV:</b> “A Day Through My Glasses” → deep-link to store locator.</p>
+          <p><b>Expert:</b> optician / tech insights → appointment calendar.</p>
+          <p><b>Demo bytes:</b> 15-second feature micro-tutorials → geofenced in-store demo coupon.</p>
+        </details>
+      </div>
+      <div class="pillar-card">
+        <div class="n">06</div><h4>Complimentary Single-Vision Prescription Lens Program</h4>
+        <p>Use a prescription-led value proposition to address lens-cost and fitting friction in optical channels.</p>
+        <details><summary>Open full playbook</summary>
+          <p><b>Offer:</b> Buy Ray-Ban Meta Smart Glasses + complimentary single-vision prescription lenses + free eye checkup.</p>
+          <p><b>Lens scope:</b> Index 1.56/1.60 with Anti-Reflective & Blue Light coating; flat credit such as ₹2,500 toward Progressive/Transitions upgrades.</p>
+          <p><b>Economics stated in the document:</b> lens wholesale production cost represented as &lt;10–15% of retail price.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <div class="subhead"><h3>4 · People capability engine</h3><span>Peer-to-peer learning from proven selling behaviour</span></div>
+    <div class="play-card full">
+      <div class="pk">Proposed intervention · People Lab</div>
+      <h3>Peer-to-Peer Promoter Academy / Champion Promoter Program</h3>
+      <p>Use consistently strong promoters as internal trainers. Identify Champions from repeatable performance, codify their selling behaviours, train peers through short role-play sessions, then measure the coached promoter's improvement.</p>
+      <ul>
+        <li><b>Champion selection:</b> consistent sales, conversion, customer feedback, product knowledge, attendance and ability to articulate their method.</li>
+        <li><b>Training:</b> customer opening, qualification, contextual demos, objection handling, closing and store-team referrals.</li>
+        <li><b>Measurement:</b> compare baseline vs 2-week and 30-day unit productivity and conversion.</li>
+        <li><b>Scale:</b> convert proven behaviours into onboarding and the category expansion playbook.</li>
+      </ul>
+    </div>
+  </div>
+
+<div class="section">
+    <div class="subhead"><h3>4 · Prescription proposition: strategic logic & target outcomes</h3><span>Source playbook targets</span></div>
+    <table class="play-table">
+      <tr><th>Strategic advantage</th><th>Current operational gap</th><th>Strategic resolution</th><th>Target outcome</th></tr>
+      <tr><td>High-Street conversion</td><td>Customers hesitate on extra lens costs despite good High-Street conversion in the playbook.</td><td>Eliminate double-charging friction by bundling prescription value with smart frames.</td><td>Boost High-Street conversion to 18%+.</td></tr>
+      <tr><td>Optician alignment</td><td>Regular opticians view promoters as third-party vendors.</td><td>Give opticians a clinical and financial reason to co-sell through eye tests and lens fittings.</td><td>Increase internal staff referral sales by &gt;25%.</td></tr>
+      <tr><td>Social CTA hook</td><td>Tech ads struggle to pull prescription wearers into physical stores.</td><td>Use “Book a Free Eye Test & Custom Fitting” as an Expert Video Byte hook.</td><td>Double O2O booking-voucher redemptions.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>5 · 90-day implementation roadmap</h3><span>Milestones directly from the strategy playbook</span></div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card"><div class="days">DAYS 1–15</div><h4>Build the operating base</h4><p>Deploy real-time performance dashboard; launch 5-minute POS onboarding checklist; roll out modular pitch frameworks; identify Champion promoters and codify winning behaviours; launch Free Prescription Lens bundle.</p></div>
+      <div class="roadmap-card"><div class="days">DAYS 16–45</div><h4>Activate demand & referrals</h4><p>Implement store-staff referral micro-bonuses; launch Champion peer-training sessions; launch 3-km geotargeted VIP trial ads; align promoter shifts to Thu–Sun, 3–9 PM.</p></div>
+      <div class="roadmap-card"><div class="days">DAYS 46–60</div><h4>Reallocate capacity</h4><p>Execute Day-60 store allocation audit; reallocate promoter positions from bottom 10% Malls to High Street opticians; pair lower performers with Champion promoters and top performers.</p></div>
+      <div class="roadmap-card"><div class="days">DAYS 61–90</div><h4>Evaluate & institutionalise</h4><p>Evaluate Day-7 and Day-30 app active-sync rates; review coached-promoter unit and conversion lift, store-level CPA and conversion efficiency; finalize category expansion playbook.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>6 · Target KPI scorecard</h3><span>Targets stated in the source document</span></div>
+    <div class="kpi-grid">
+      <div class="kpi-box"><b>CONVERSION</b><strong>12%+</strong><span>Increase overall demo-to-sale conversion from ~7.5%.</span></div>
+      <div class="kpi-box"><b>APP ACTIVATION</b><strong>&gt;95%</strong><span>App pairing before customer checkout.</span></div>
+      <div class="kpi-box"><b>MANAGEMENT COVERAGE</b><strong>100%</strong><span>Scheduled manager visits across 10-day rotation cycles.</span></div>
+      <div class="kpi-box"><b>STORE REFERRALS</b><strong>&gt;15%</strong><span>Total sales leads generated via host-store optical staff referrals.</span></div>
+      <div class="kpi-box"><b>LENS REDEMPTION</b><strong>40–50%</strong><span>Redemption among optical-store buyers.</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="play-card full">
+      <div class="pk">Operating principle</div>
+      <h3>Build the category, not just the activity</h3>
+      <p>The strategy links demand generation, contextual selling, purchase-friction removal, post-purchase activation, store-team referrals, promoter productivity and allocation decisions into one operating system.</p>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="champions">
+  <div class="top">
+    <div>
+      <div class="eyebrow">PEOPLE ENGINE · INTERNAL KNOWLEDGE TRANSFER</div>
+      <div class="title">Promoter Champions Academy</div>
+      <div class="lead">Turn the strongest promoters' practical selling experience into a repeatable peer-learning system — so capability scales inside the network, not only through central training.</div>
+    </div>
+    <div class="badge">PROPOSED INTERVENTION</div>
+  </div>
+
+  <div class="champ-hero">
+    <div class="champ-copy">
+      <div class="champ-kicker">IDENTIFY → CODIFY → TEACH → PRACTICE → MEASURE → REPEAT</div>
+      <h2>Make your best promoters <span>force multipliers.</span></h2>
+      <p>Select consistently strong performers, capture what they actually do differently, convert those behaviours into short peer-training modules, and measure whether coached promoters improve.</p>
+    </div>
+    <div class="champ-loop">
+      <div class="champ-node"><b>IDENTIFY</b><span>High & consistent performers</span></div><div class="champ-arrow">→</div>
+      <div class="champ-node"><b>CODIFY</b><span>Winning behaviours</span></div><div class="champ-arrow">→</div>
+      <div class="champ-node"><b>COACH</b><span>Peer sessions</span></div><div class="champ-arrow">→</div>
+      <div class="champ-node"><b>MEASURE</b><span>2-week / 30-day lift</span></div>
+    </div>
+  </div>
+
+  <div class="champ-grid">
+    <div class="champ-card">
+      <h3>Who becomes a Champion?</h3>
+      <p>Selection should use a balanced scorecard rather than one strong week of sales.</p>
+      <ul>
+        <li>Consistent unit sales and demo-to-sale conversion</li>
+        <li>Strong enquiry handling and customer feedback</li>
+        <li>High product knowledge / training performance</li>
+        <li>Reliable attendance and store discipline</li>
+        <li>Ability to explain the “why” behind their selling approach</li>
+      </ul>
+      <div class="champ-role">
+        <div><b>CHAMPION</b><span>Trains 2–3 peers, shares best practices and runs role-play sessions.</span></div>
+        <div><b>COACHED PROMOTER</b><span>Practices the method, receives shadowing and tracks improvement.</span></div>
+        <div><b>MANAGER</b><span>Validates the method, observes sessions and monitors performance lift.</span></div>
+        <div><b>PROGRAM TEAM</b><span>Codifies repeatable practices into the promoter playbook.</span></div>
+      </div>
+    </div>
+
+    <div class="champ-card">
+      <h3>What gets taught?</h3>
+      <ul>
+        <li><b>Opening:</b> how to approach different customer types.</li>
+        <li><b>Qualification:</b> identify lifestyle, technology and prescription intent.</li>
+        <li><b>Demo:</b> make the customer experience the benefit instead of feature-dumping.</li>
+        <li><b>Objection handling:</b> price, phone comparison, “why do I need it?”, prescription and privacy.</li>
+        <li><b>Closing:</b> recognise purchase intent and move enquiry → sale.</li>
+        <li><b>Store collaboration:</b> build referrals from optical/store staff.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="champ-card" style="margin-top:12px">
+    <h3>Peer-learning operating loop</h3>
+    <div class="champ-flow">
+      <div class="champ-step"><b>1 · IDENTIFY</b><span>Flag Champion candidates from performance data.</span></div><div class="arr">→</div>
+      <div class="champ-step"><b>2 · CODIFY</b><span>Capture their repeatable behaviours and scripts.</span></div><div class="arr">→</div>
+      <div class="champ-step"><b>3 · TEACH</b><span>30-minute peer session + role-play.</span></div><div class="arr">→</div>
+      <div class="champ-step"><b>4 · SHADOW</b><span>Champion observes the coached promoter in-store.</span></div><div class="arr">→</div>
+      <div class="champ-step"><b>5 · MEASURE</b><span>Compare baseline with 2-week and 30-day output.</span></div><div class="arr">→</div>
+      <div class="champ-step"><b>6 · SCALE</b><span>Promote successful behaviours into the playbook.</span></div>
+    </div>
+
+    <div class="champ-metrics">
+      <div class="champ-metric"><b>PRIMARY</b><strong>Unit lift</strong><span>Change in weekly units for coached promoters vs baseline.</span></div>
+      <div class="champ-metric"><b>QUALITY</b><strong>Conversion lift</strong><span>Change in demo → sale conversion after coaching.</span></div>
+      <div class="champ-metric"><b>BEHAVIOUR</b><strong>Demo quality</strong><span>Observed use of qualifying, contextual demo and objection handling.</span></div>
+      <div class="champ-metric"><b>SCALE</b><strong>Champion yield</strong><span>Number of peers improved per Champion.</span></div>
+    </div>
+
+    <div class="champ-90">
+      <b>90-DAY INTEGRATION</b>
+      <p><b>Days 1–15:</b> identify Champion candidates and document winning behaviours. <b>Days 16–45:</b> launch peer sessions and shadowing. <b>Days 46–60:</b> compare coached vs baseline performance and refine modules. <b>Days 61–90:</b> institutionalise the strongest modules in onboarding and the category expansion playbook.</p>
+    </div>
+  </div>
+</section>
+<section class="view" id="social">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Growth Engine · Demand Generation</div>
+      <div class="title">Social Discovery</div>
+      <div class="lead">Turn passive digital awareness into higher-intent store visits, then connect those visits to the same demo → sale funnel used across the program.</div>
+    </div>
+    <div class="badge">PROPOSED PILOT · O2O</div>
+  </div>
+
+  <div class="social-hero">
+    <div class="social-hero-copy">
+      <div class="social-kicker">SOCIAL → STORE → SALE</div>
+      <h2>Don't use social media just to create <span>awareness.</span></h2>
+      <p>Use short-form, use-case-led content to create a reason to visit the store, reserve a trial and experience the product. The objective is measurable downstream conversion, not views alone.</p>
+    </div>
+    <div class="social-hero-side">
+      <div class="social-funnel-mini">
+        <div><b>DISCOVER</b><span>Social content</span></div><i>→</i>
+        <div><b>BOOK</b><span>Geo CTA</span></div><i>→</i>
+        <div><b>TRY</b><span>10-min trial</span></div><i>→</i>
+        <div><b>CONVERT</b><span>Store sale</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="subhead"><h3>Three content formats</h3><span>Each format has a clear store-level action</span></div>
+    <div class="social-format-grid">
+      <div class="social-format">
+        <div class="num">01</div>
+        <h3>Customer Interaction</h3>
+        <p>15–30 second reactions showing customers experiencing hands-free capture, open-ear audio or Meta AI. Make the benefit visible before asking the customer to visit a store.</p>
+        <div class="cta-box"><b>CTA</b>Book a 10-minute in-store trial</div>
+      </div>
+      <div class="social-format">
+        <div class="num">02</div>
+        <h3>POV / Day-in-the-Life</h3>
+        <p>Show a real use case from the wearer's perspective: travel, cycling, commuting, content capture or everyday moments.</p>
+        <div class="cta-box"><b>CTA</b>Try this experience at your nearest participating store</div>
+      </div>
+      <div class="social-format">
+        <div class="num">03</div>
+        <h3>Expert Byte</h3>
+        <p>Optician or technology expert explains a specific concern such as prescription fitting, product use or what the customer can actually do with the glasses.</p>
+        <div class="cta-box"><b>CTA</b>Consult an in-store expert</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-o2o">
+    <div class="social-o2o-head">
+      <h3>The O2O measurement chain</h3>
+      <span>Judge the complete journey, not social impressions</span>
+    </div>
+    <div class="o2o-flow">
+      <div class="o2o-step"><b>CONTENT</b><span>Video published</span></div><div class="o2o-arrow">→</div>
+      <div class="o2o-step"><b>CTA</b><span>Clicks / intent</span></div><div class="o2o-arrow">→</div>
+      <div class="o2o-step"><b>BOOKING</b><span>WhatsApp / trial</span></div><div class="o2o-arrow">→</div>
+      <div class="o2o-step"><b>STORE</b><span>Show-up</span></div>
+    </div>
+    <div class="social-measure">
+      <div><b>LEADING</b><span>CTR · booking rate · show-up rate</span></div>
+      <div><b>ENGAGEMENT</b><span>Demo rate · enquiries · trial completion</span></div>
+      <div><b>CONVERSION</b><span>Demo → sale · enquiry → sale</span></div>
+      <div><b>BUSINESS</b><span>Units · revenue · revenue per booked trial</span></div>
+    </div>
+  </div>
+
+  <div class="social-lens-link">
+    <div><b>Next conversion lever: Prescription Lens Proposition</b><br><span>Social Discovery brings higher-intent customers into the funnel. The prescription-lens pilot addresses a specific purchase friction identified in customer feedback.</span></div>
+    <button onclick="show('plan');setTimeout(()=>document.getElementById('growth90')?.scrollIntoView({behavior:'smooth'}),100)">Open Growth Engine Plan →</button>
+  </div>
+</section>
+
 <section class="view" id="plan">
   <div class="plan-hero">
     <div>
@@ -377,16 +1090,16 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
   </div>
   <div class="week-grid">
     <button class="week-card" onclick="openPlanWeek(5)">
-      <span class="week-no amber-text">W05</span><b>Design the pilot</b><span>Select stores, interventions and baselines.</span><i>Open details →</i>
+      <span class="week-no amber-text">W05</span><b>Design the pilot</b><span>Select stores, interventions and baselines, including O2O and prescription pilots.</span><i>Open details →</i>
     </button>
     <button class="week-card" onclick="openPlanWeek(6)">
-      <span class="week-no amber-text">W06</span><b>Launch targeted demos</b><span>Test use-case-led demonstration structure.</span><i>Open details →</i>
+      <span class="week-no amber-text">W06</span><b>Launch targeted demos</b><span>Test use-case-led demos alongside the first Social → Store trial cohort.</span><i>Open details →</i>
     </button>
     <button class="week-card" onclick="openPlanWeek(7)">
-      <span class="week-no amber-text">W07</span><b>Test objection handling</b><span>Standardise responses to recurring friction.</span><i>Open details →</i>
+      <span class="week-no amber-text">W07</span><b>Test conversion friction</b><span>Test objection handling and the prescription-lens proposition.</span><i>Open details →</i>
     </button>
     <button class="week-card" onclick="openPlanWeek(8)">
-      <span class="week-no amber-text">W08</span><b>Enable store teams</b><span>Improve customer referral into the promoter.</span><i>Open details →</i>
+      <span class="week-no amber-text">W08</span><b>Enable store teams</b><span>Improve referral and support the optical-store pilot.</span><i>Open details →</i>
     </button>
   </div>
 
@@ -423,7 +1136,7 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
   </div>
 
   <div class="plan-subnav">
-    <a href="#timeline90">TIMELINE</a><a href="#interventions90">INTERVENTIONS</a><a href="#gates90">DECISION GATES</a><a href="#governance90">GOVERNANCE</a><a href="#risks90">RISKS</a><a href="#data90">DATA TRACKER</a><a href="#store90">STORE MATRIX</a><a href="#decision90">DECISION TREE</a><a href="#outputs90">DAY-90 OUTPUTS</a>
+    <a href="#timeline90">TIMELINE</a><a href="#interventions90">INTERVENTIONS</a><a href="#growth90">GROWTH ENGINES</a><a href="#gates90">DECISION GATES</a><a href="#governance90">GOVERNANCE</a><a href="#risks90">RISKS</a><a href="#data90">DATA TRACKER</a><a href="#store90">STORE MATRIX</a><a href="#decision90">DECISION TREE</a><a href="#outputs90">DAY-90 OUTPUTS</a>
   </div>
   <div class="control-strip">
     <div class="control-tile blue"><b>DAY 30</b><span>Locate the funnel constraint and establish the pilot baseline.</span></div>
@@ -441,8 +1154,46 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
       <div class="intervention"><div class="tag">02 · Objections</div><h4>Objection-handling playbook</h4><p>Test consistent responses to objections explicitly surfaced in the case, including price, privacy, prescription and comparison concerns.</p><div class="mini"><b>Primary:</b> Enquiry → sale<br><b>Secondary:</b> Demo → sale<br><b>Data:</b> Reason-coded objections</div><details><summary>What changes?</summary><p>Record objection type, apply a consistent response structure and compare conversion against baseline.</p></details></div>
       <div class="intervention"><div class="tag">03 · Store execution</div><h4>Store-team referral</h4><p>Test whether concise store-team enablement increases qualified customer opportunities reaching the promoter.</p><div class="mini"><b>Primary:</b> Store referrals<br><b>Secondary:</b> Referral → demo / sale<br><b>Data:</b> Referral source</div><details><summary>What changes?</summary><p>Brief store staff on what the product is, who to refer and how to hand over the customer.</p></details></div>
       <div class="intervention"><div class="tag">04 · Availability</div><h4>Promoter availability</h4><p>Test whether missed interactions or return visits create measurable conversion leakage in stores where this issue appears.</p><div class="mini"><b>Primary:</b> Return-visit conversion<br><b>Secondary:</b> Complaints<br><b>Data:</b> Availability / return outcome</div><details><summary>What changes?</summary><p>Capture missed interactions and subsequent outcomes rather than assuming availability is the cause.</p></details></div>
+      <div class="intervention"><div class="tag">05 · Demand generation</div><h4>Social → Store O2O</h4><p>Test whether short-form use-case content plus a geo-targeted booking CTA generates higher-intent store visits and measurable downstream sales.</p><div class="mini"><b>Primary:</b> Booked trial → show-up<br><b>Secondary:</b> Trial → sale<br><b>Data:</b> UTM / booking / store outcome</div><details><summary>What changes?</summary><p>Customer reaction, POV and expert content route into a reserved in-store trial. Judge the full path, not views alone.</p></details></div>
+      <div class="intervention"><div class="tag">06 · Purchase friction</div><h4>Prescription lens proposition</h4><p>Test a complimentary single-vision prescription lens + eye-check proposition where prescription compatibility is a recurring customer question.</p><div class="mini"><b>Primary:</b> Eligible buyer → sale<br><b>Secondary:</b> Redemption / activation<br><b>Data:</b> Eligibility / offer / purchase</div><details><summary>What changes?</summary><p>Run the proposition in selected optical stores. Validate customer response and unit economics before considering scale.</p></details></div>
     </div>
     <div class="plan-note"><b>INTERVENTION RULE</b><p>One diagnosed problem → one targeted intervention → one primary KPI → one decision. The interventions are proposed tests, not established causal explanations.</p></div>
+  </div>
+
+  <div class="subsection" id="growth90">
+    <div class="subhead"><h3>Growth engine pilots</h3><span>Two interventions plugged into the customer funnel</span></div>
+    <div class="growth-engine-grid">
+      <div class="growth-engine">
+        <div class="ge-kicker">TOP OF FUNNEL · SOCIAL → STORE</div>
+        <h3>O2O content-to-trial pilot</h3>
+        <p>Run customer-reaction, POV and expert content with a geo-targeted CTA that routes customers to a reserved 10-minute in-store trial.</p>
+        <div class="ge-flow">
+          <span>Content</span><i>→</i><span>CTA</span><i>→</i><span>WhatsApp</span><i>→</i><span>Trial</span><i>→</i><span>Sale</span>
+        </div>
+        <div class="ge-measure"><b>Primary:</b> booked trials and show-up rate<br><b>Secondary:</b> trial → demo → sale, revenue per booked trial</div>
+        <span class="pilot-badge">CONTROLLED PILOT · DO NOT ASSUME CAUSALITY</span>
+      </div>
+      <div class="growth-engine lens">
+        <div class="ge-kicker">CONVERSION · PRESCRIPTION</div>
+        <h3>Prescription lens proposition</h3>
+        <p>Test a complimentary single-vision prescription lens + eye-check proposition in selected optical stores. Treat the offer as a hypothesis, not an established solution.</p>
+        <div class="ge-flow">
+          <span>Eligible buyer</span><i>→</i><span>Offer</span><i>→</i><span>Redemption</span><i>→</i><span>Purchase</span><i>→</i><span>Activation</span>
+        </div>
+        <div class="ge-measure"><b>Primary:</b> eligible-buyer → purchase conversion<br><b>Secondary:</b> offer redemption, app activation, complaints, unit economics</div>
+        <span class="pilot-badge">CONTROLLED PILOT · ECONOMICS VALIDATION REQUIRED</span>
+      </div>
+    </div>
+    <div class="growth-funnel">
+      <h3>WHY THESE BELONG IN THE SAME PLAN</h3>
+      <p>Social O2O addresses demand quality before the store visit. The prescription proposition addresses a specific purchase friction after customer engagement. Both must be measured through the same funnel rather than judged on impressions or offer uptake alone.</p>
+      <div class="gf-row">
+        <div class="gf-step"><b>ATTRACT</b><span>Social content</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>QUALIFY</b><span>Booked trial</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>DEMONSTRATE</b><span>Use-case demo</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>CONVERT</b><span>Prescription / objection handling</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="subsection" id="gates90">
@@ -683,6 +1434,39 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
       <div><b>03 · Store referral</b><span>Test opportunity generation.</span></div>
       <div><b>04 · Availability</b><span>Test missed-interaction leakage.</span></div>
     </div>
+
+    <div class="growth-engine-grid">
+      <div class="growth-engine">
+        <div class="ge-kicker">GROWTH ENGINE A · DEMAND GENERATION</div>
+        <h3>Social → Store O2O</h3>
+        <p>Use short-form, use-case-led content to create higher-intent store visits rather than relying only on casual in-store discovery.</p>
+        <div class="ge-flow">
+          <span>15–30s content</span><i>→</i><span>Geo CTA</span><i>→</i><span>WhatsApp booking</span><i>→</i><span>10-min trial</span><i>→</i><span>Store sale</span>
+        </div>
+        <div class="ge-measure"><b>Measure:</b> CTA clicks → bookings → show-up → demo → sale → revenue. <span class="pilot-badge">PILOT IN SELECTED STORES</span></div>
+      </div>
+      <div class="growth-engine lens">
+        <div class="ge-kicker">GROWTH ENGINE B · PURCHASE FRICTION</div>
+        <h3>Prescription Lens Proposition</h3>
+        <p>Test a complimentary single-vision prescription lens + eye-check proposition in selected optical stores where prescription questions recur.</p>
+        <div class="ge-flow">
+          <span>Prescription need</span><i>→</i><span>Offer</span><i>→</i><span>Eye check</span><i>→</i><span>Purchase</span><i>→</i><span>Activation</span>
+        </div>
+        <div class="ge-measure"><b>Measure:</b> Eligible buyers → offer acceptance → redemption → purchase conversion. <span class="pilot-badge">PILOT · ECONOMICS TO BE VALIDATED</span></div>
+      </div>
+    </div>
+
+    <div class="growth-funnel">
+      <h3>INTEGRATED CATEGORY-BUILDING FUNNEL</h3>
+      <p>The two ideas sit at different points in the same system: social media improves the quality of demand entering the funnel; the prescription proposition tests a specific conversion barrier in optical stores.</p>
+      <div class="gf-row">
+        <div class="gf-step"><b>DISCOVER</b><span>Social content</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>VISIT</b><span>Booked trial</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>DEMO</b><span>Contextual pitch</span></div><div class="gf-arrow">→</div>
+        <div class="gf-step"><b>CONVERT</b><span>Lens / objection</span></div>
+      </div>
+    </div>
+
     <button class="story-action" onclick="show('plan')">Open detailed 90-Day Control Tower →</button>
   </article>
 
@@ -734,13 +1518,13 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
   </div>
 </div>
 
-<div class="footer">Source: “The Smart Glasses Problem: A Program Management Case.” All displayed calculations are derived from case exhibits. Hypotheses and proposed interventions are explicitly labelled.</div>
+<div class="footer">Source: “The Smart Glasses Problem: A Program Management Case.” All displayed calculations are derived from case exhibits. Social → Store and prescription-lens initiatives are proposed pilots; their impact is not established by the case data.</div>
 </main>
 </div>
 <script>
 const D = {"weekly": {"W1": {"positions": 48, "deployed": 43, "attendance": 91, "stores": 18, "training": 88, "demos": 1184, "units": 92, "revenue": 38.4, "enquiries": 417, "activations": 71, "complaints": 8, "feedback": 29}, "W2": {"positions": 48, "deployed": 44, "attendance": 94, "stores": 21, "training": 92, "demos": 1241, "units": 97, "revenue": 40.2, "enquiries": 451, "activations": 79, "complaints": 6, "feedback": 31}, "W3": {"positions": 48, "deployed": 45, "attendance": 92, "stores": 20, "training": 94, "demos": 1397, "units": 103, "revenue": 43.1, "enquiries": 486, "activations": 82, "complaints": 9, "feedback": 27}, "W4": {"positions": 48, "deployed": 44, "attendance": 95, "stores": 23, "training": 94, "demos": 1284, "units": 89, "revenue": 37.6, "enquiries": 463, "activations": 76, "complaints": 7, "feedback": 32}, "W5": {"positions": 48, "deployed": 46, "attendance": 93, "stores": 19, "training": 96, "demos": 1512, "units": 118, "revenue": 49.8, "enquiries": 528, "activations": 91, "complaints": 11, "feedback": 30}, "W6": {"positions": 48, "deployed": 45, "attendance": 94, "stores": 22, "training": 96, "demos": 1476, "units": 111, "revenue": 47.1, "enquiries": 511, "activations": 88, "complaints": 10, "feedback": 28}}, "stores": [["S01", "Delhi", "Premium Mall", 620, 25, 188, 71, 19, 42100, 4.6], ["S02", "Delhi", "High Street", 310, 22, 104, 39, 11, 39800, 4.2], ["S03", "Delhi", "Premium Mall", 710, 24, 143, 66, 8, 44200, 4.7], ["S04", "Mumbai", "Premium Mall", 680, 25, 211, 83, 23, 41600, 4.8], ["S05", "Mumbai", "High Street", 290, 19, 76, 34, 7, 38900, 3.8], ["S06", "Mumbai", "Premium Mall", 540, 23, 121, 52, 13, 43700, 4.4], ["S07", "Bengaluru", "Premium Mall", 590, 24, 96, 61, 9, 44500, 4.1], ["S08", "Bengaluru", "High Street", 270, 25, 162, 48, 17, 40200, 4.5], ["S09", "Bengaluru", "Premium Mall", 740, 21, 84, 55, 6, 45100, 3.7], ["S10", "Hyderabad", "Premium Mall", 510, 23, 174, 69, 16, 41300, 4.6], ["S11", "Hyderabad", "High Street", 330, 20, 91, 37, 9, 39700, 4.0], ["S12", "Pune", "Premium Mall", 460, 24, 132, 49, 14, 40900, 4.5], ["S13", "Pune", "High Street", 250, 18, 63, 28, 5, 38500, 3.6], ["S14", "Pune", "Premium Mall", 570, 25, 117, 44, 12, 42600, 4.3]], "promoters": [["P01", "Delhi", 8, "Smartphones", 91, 97, 42, 5.1, 8400], ["P02", "Delhi", 2, "Eyewear", 84, 95, 37, 4.2, 6100], ["P03", "Delhi", 11, "Consumer Electronics", 96, 98, 29, 2.8, 4900], ["P04", "Mumbai", 6, "Premium Retail", 89, 96, 51, 5.8, 9700], ["P05", "Mumbai", 3, "Eyewear", 93, 97, 28, 3.9, 6800], ["P06", "Mumbai", 14, "Smartphones", 95, 94, 44, 6.1, 10200], ["P07", "Bengaluru", 4, "Consumer Electronics", 87, 98, 22, 2.1, 3400], ["P08", "Bengaluru", 9, "Eyewear", 94, 96, 46, 5.7, 9200], ["P09", "Bengaluru", 2, "Fashion Retail", 90, 92, 38, 3.2, 5200], ["P10", "Hyderabad", 7, "Smartphones", 92, 98, 49, 5.5, 8900], ["P11", "Hyderabad", 5, "Eyewear", 88, 94, 31, 4.6, 6700], ["P12", "Pune", 10, "Premium Retail", 96, 97, 35, 4.8, 7600]], "recruit": [["Job portals", 214, 67, 19, 11, 8], ["Employee referrals", 63, 31, 16, 12, 11], ["Walk-in drives", 142, 49, 18, 9, 6], ["Direct sourcing", 39, 22, 10, 7, 13], ["Existing retail networks", 31, 18, 9, 6, 14]], "feedback": [["Customer liked the glasses but wanted to think about it.", "Purchase hesitation"], ["Promoter knows product very well.", "Promoter execution"], ["Not clear whether this is a gadget or eyewear.", "Category / use-case clarity"], ["Customer asked if prescription lenses are possible.", "Product objection"], ["Promoter was very energetic.", "Promoter execution"], ["People are curious but don\u2019t understand why they need it.", "Category / use-case clarity"], ["Demo was good, but customer was looking for regular sunglasses.", "Category / use-case clarity"], ["Store team doesn\u2019t proactively refer customers.", "Store execution"], ["Promoter spends a lot of time explaining features.", "Demo efficiency"], ["Customers who try the product seem interested.", "Experience / engagement"], ["Customer wanted to compare with phone camera.", "Product comparison"], ["Good product, but expensive.", "Price objection"], ["Promoter was not available when customer came back.", "Availability"], ["Some customers think the camera is intrusive.", "Privacy objection"], ["Store staff themselves don\u2019t know enough about the product.", "Store enablement"]]};
 const tabs=[
-["judge","Judge Mode"],["executive","Executive"],["program","Program Trends"],["funnel","Funnel"],["stores","Store Lab"],["people","People Lab"],["voice","Customer Voice"],["recruitment","Recruitment"],["gaps","Data Gaps"],["plan","90-Day Plan"],["story","5-Slide Story"]
+["judge","Judge Mode"],["executive","Executive"],["program","Program Trends"],["funnel","Funnel"],["playbook","Strategy Playbook"],["champions","Promoter Champions"],["social","Social Discovery"],["stores","Store Lab"],["people","People Lab"],["voice","Customer Voice"],["recruitment","Recruitment"],["gaps","Data Gaps"],["plan","90-Day Plan"],["story","5-Slide Story"]
 ];
 const nav=document.getElementById("nav"), tabbar=document.getElementById("tabs");
 tabs.forEach(([id,label],i)=>{let b=document.createElement("button");b.textContent=label;b.onclick=()=>show(id);if(i===0)b.className="active";nav.appendChild(b);let t=b.cloneNode(true);t.className="tab"+(i===0?" active":"");t.onclick=()=>show(id);tabbar.appendChild(t)});
@@ -755,6 +1539,33 @@ document.getElementById("promoterTable").innerHTML=D.promoters.map(p=>`<tr><td>$
 
 const counts={};D.feedback.forEach(x=>counts[x[1]]=(counts[x[1]]||0)+1);const total=D.feedback.length;document.getElementById("themes").innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="theme"><b>${k}</b><span>${v}/${total} examples</span></div>`).join("");
 document.getElementById("recruitTable").innerHTML=D.recruit.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${(r[4]/r[1]*100).toFixed(1)}%</td></tr>`).join("");
+
+function renderWeekly(){
+  const weeks=Object.entries(D.weekly);
+  const metricEl=document.getElementById("metricSelect");
+  const barsEl=document.getElementById("weeklyBars");
+  const axisEl=document.getElementById("weeklyAxis");
+  const tableEl=document.getElementById("weeklyTable");
+  if(!metricEl||!barsEl||!axisEl||!tableEl)return;
+  const metric=metricEl.value;
+  const vals=weeks.map(([k,v])=>Number(v[metric])||0);
+  const max=Math.max(...vals,1);
+  const labels={demos:"Demonstrations",enquiries:"Customer enquiries",units:"Units sold",revenue:"Revenue (₹L)",activations:"App activations",complaints:"Complaints"};
+  barsEl.innerHTML=weeks.map(([k,v],i)=>{
+    const pct=Math.max(2,(vals[i]/max)*100);
+    const display=metric==="revenue"?`₹${vals[i].toFixed(1)}L`:vals[i].toLocaleString();
+    return `<div class="barwrap"><div class="bar" title="${k}: ${display}" style="height:${pct}%"></div></div>`;
+  }).join("");
+  axisEl.innerHTML=weeks.map(([k])=>`<span>${k}</span>`).join("");
+  tableEl.innerHTML=weeks.map(([k,v])=>`<tr>
+    <td><b>${k}</b></td><td>${v.deployed}</td><td>${v.attendance}%</td><td>${v.training}%</td>
+    <td>${v.demos.toLocaleString()}</td><td>${v.enquiries.toLocaleString()}</td><td>${v.activations}</td>
+    <td>${v.units}</td><td>₹${v.revenue.toFixed(1)}L</td><td>${v.complaints}</td>
+  </tr>`).join("");
+  barsEl.parentElement.setAttribute("data-selected-metric",labels[metric]||metric);
+}
+const metricSelect=document.getElementById("metricSelect");
+if(metricSelect){metricSelect.onchange=renderWeekly;renderWeekly();}
 
 function storySlide(n){
   document.querySelectorAll(".story-slide").forEach(s=>s.classList.remove("active"));
@@ -773,9 +1584,9 @@ function storySlide(n){
 2:["DIAGNOSE","Days 8–14","Diagnose the store funnel","Separate an activity constraint from a conversion constraint.",["Calculate demonstrations per promoter-present day.","Calculate demo → enquiry, enquiry → sale and demo → sale.","Segment stores into activity/conversion situations.","Flag stores where activity and conversion point in different directions."],["Store diagnostic matrix","Priority stores","Initial hypotheses"],["Demos / promoter-present day","Demo → enquiry","Enquiry → sale","Demo → sale"],"For each priority store, do we know which part of the funnel needs to be tested?"],
 3:["DIAGNOSE","Days 15–21","Decode customer voice","Turn qualitative feedback into structured, testable hypotheses rather than treating comments as proven causes.",["Code the available feedback into consistent themes.","Separate category clarity, product objections, store execution, promoter execution and purchase hesitation.","Map recurring themes against store-level funnel performance where data permits.","Identify themes to test during the pilot."],["Feedback taxonomy","Theme frequency view","Testable hypothesis shortlist"],["Feedback items coded","Recurring themes","Hypotheses linked to funnel metrics"],"Which customer frictions are common enough and measurable enough to test?"],
 4:["DIAGNOSE","Days 22–30","Set store diagnostic profiles","Translate the first 30 days into a specific intervention hypothesis for each priority store.",["Review store activity, conversion and feedback together.","Document the primary constraint to test for each priority store.","Identify high-conversion practices worth observing.","Prepare the baseline for pilot comparison."],["Store diagnostic profiles","Pilot store shortlist","Day-30 baseline"],["Stores profiled","Baseline completeness","Priority stores selected"],"Are we clear on what intervention each pilot store is testing?"],
-5:["PILOT","Days 31–37","Design the pilot","Set up a controlled test where each intervention is matched to a diagnosed constraint.",["Select stores representing different diagnostic situations.","Assign one primary intervention hypothesis to each situation.","Define baseline, measurement window and success indicators.","Brief field and store stakeholders."],["Pilot design","Store/intervention map","Baseline KPI sheet"],["Pilot stores confirmed","Baseline metrics captured","Adherence definition"],"Can we distinguish intervention effects from normal week-to-week movement?"],
-6:["PILOT","Days 38–44","Launch use-case-led demonstrations","Test whether a clearer, customer-use-case-led demonstration improves engagement and conversion.",["Standardise identify → qualify → demonstrate → resolve concern → ask.","Reduce unnecessary feature-by-feature explanation.","Capture demo → enquiry and demo → sale at pilot-store level.","Collect qualitative observations."],["Pilot demo structure","Weekly pilot readout","Customer-response observations"],["Demo → enquiry","Demo → sale","Units / promoter-present day"],"Does the revised demo structure improve the relevant funnel metric versus baseline?"],
-7:["PILOT","Days 45–51","Test objection handling","Test whether consistent responses to recurring purchase concerns reduce conversion friction.",["Build a response guide around price, privacy, prescription and comparison concerns surfaced in the case.","Train participating promoters.","Record objection type when it occurs.","Compare enquiry → sale and demo → sale with baseline."],["Objection-handling guide","Reason-coded objection log","Pilot conversion readout"],["Objection frequency","Enquiry → sale","Demo → sale"],"Which objections appear associated with conversion leakage, and does the intervention change that pattern?"],
+5:["PILOT","Days 31–37","Design the pilot","Set up controlled tests where each intervention is matched to a diagnosed constraint, including the Social → Store and prescription-lens growth engines.",["Select stores representing different diagnostic situations.","Assign one primary intervention hypothesis to each situation.","Select Social → Store pilot stores and define the content → booking → trial funnel.","Select optical stores for the prescription-lens proposition and define eligibility, offer mechanics and economics to validate.","Define baseline, measurement window and success indicators.","Brief field and store stakeholders."],["Pilot design","Store/intervention map","Baseline KPI sheet"],["Pilot stores confirmed","Baseline metrics captured","Adherence definition"],"Can we distinguish intervention effects from normal week-to-week movement?"],
+6:["PILOT","Days 38–44","Launch use-case-led demonstrations + Social → Store pilot","Test whether clearer demonstrations and higher-intent digitally generated store visits improve engagement and conversion.",["Standardise identify → qualify → demonstrate → resolve concern → ask.","Reduce unnecessary feature-by-feature explanation.","Capture demo → enquiry and demo → sale at pilot-store level.","Collect qualitative observations."],["Pilot demo structure","Weekly pilot readout","Customer-response observations"],["Demo → enquiry","Demo → sale","Units / promoter-present day"],"Does the revised demo structure improve the relevant funnel metric versus baseline?"],
+7:["PILOT","Days 45–51","Test objection handling + prescription proposition","Test whether consistent responses and a prescription-lens proposition reduce conversion friction in the relevant pilot stores.",["Build a response guide around price, privacy, prescription and comparison concerns surfaced in the case.","Launch the prescription-lens proposition in selected optical stores.","Train participating promoters and store staff on the proposition.","Record objection type and offer presentation when they occur.","Compare enquiry → sale and demo → sale with baseline.","Track offer redemption and app activation for eligible buyers."],["Objection-handling guide","Reason-coded objection log","Pilot conversion readout"],["Objection frequency","Enquiry → sale","Demo → sale"],"Which objections appear associated with conversion leakage, and does the intervention change that pattern?"],
 8:["PILOT","Days 52–60","Enable store teams","Test whether stronger store-team referral and product understanding increase qualified customer opportunities.",["Give store staff a concise product/referral briefing.","Define when and how staff should refer customers.","Track store referrals separately.","Measure referral → demo and referral → sale where feasible."],["Store-team briefing","Referral process","Pilot referral dashboard"],["Store referrals","Referral → demo","Referral → sale","Demo volume"],"Is store referral a meaningful lever in stores where activity is constrained?"],
 9:["SCALE","Days 61–67","Mid-pilot review","Compare pilot performance with the Day-30 baseline and decide what needs adjustment.",["Review every intervention against its predefined metric.","Separate activity changes from conversion-rate changes.","Document promoter and store-team feedback.","Stop, refine or continue interventions based on evidence."],["Mid-pilot evaluation","Intervention decision log","Refined test plan"],["Change vs baseline","Intervention adherence","Conversion movement"],"Which interventions have enough signal to continue?"],
 10:["SCALE","Days 68–74","Prepare scale decisions","Identify practices sufficiently supported to become repeatable operating standards.",["Compare results across relevant store situations.","Identify practices associated with stronger conversion.","Separate repeatable practices from context-specific observations.","Define remaining evidence requirements."],["Scale candidate list","Evidence summary","Remaining evidence gaps"],["Interventions with measurable signal","Repeatable improvement","Evidence gaps closed"],"What can responsibly be replicated, and what still needs testing?"],
