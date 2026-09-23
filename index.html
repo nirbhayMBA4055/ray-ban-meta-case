@@ -74,9 +74,91 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
 .clean-bottom{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:11px}.clean-card{background:#fff;border:1px solid #d7dee2;border-radius:7px;padding:14px}.clean-card h3{font-size:10px;margin:0 0 6px}.clean-card .quote{font-size:16px;line-height:1.25;font-weight:800;letter-spacing:-.3px;margin:0 0 6px}.clean-card p{font-size:9.5px;line-height:1.45;color:#68767e;margin:4px 0}.clean-split{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.clean-mini{padding:8px;background:#f7fafb;border:1px solid #e4eaed;border-radius:5px}.clean-mini b{font-size:8.5px;display:block}.clean-mini span{font-size:8px;line-height:1.4;color:#6b7880;display:block;margin-top:3px}
 .clean-plan{background:#111a21;color:#fff;border-radius:7px;padding:14px 16px}.clean-plan-head{display:flex;justify-content:space-between;margin-bottom:9px}.clean-plan-head b{font-size:9px}.clean-plan-head span{font-size:8px;color:#aab7be}.clean-plan-grid{display:grid;grid-template-columns:repeat(3,1fr)}.clean-phase{padding:0 14px;border-left:1px solid #31414b}.clean-phase:first-child{border-left:0;padding-left:0}.clean-phase .n{font-size:20px;color:#56b3ff;font-weight:850}.clean-phase b{font-size:9px;display:block;margin:0 0 3px}.clean-phase p{font-size:8px;color:#aab7be;line-height:1.4;margin:0}
 @media(max-width:900px){.hero-clean{grid-template-columns:1fr}.hero-clean-art{min-height:210px}.clean-kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.clean-bottom,.clean-split,.clean-plan-grid{grid-template-columns:1fr}.clean-phase{border-left:0;border-top:1px solid #31414b;padding:9px 0}.clean-phase:first-child{border-top:0}.hero-clean h2{font-size:26px}}
+
+/* Detailed 90-day weekly plan */
+.plan-hero{display:flex;justify-content:space-between;gap:20px;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:16px}
+.plan-hero h2{font-size:28px;letter-spacing:-1px;margin:5px 0 6px}.plan-hero p{font-size:10px;color:var(--muted);max-width:650px;margin:0;line-height:1.5}
+.plan-principle{width:300px;background:#eef6fb;border-left:3px solid var(--blue);padding:13px 15px;display:flex;flex-direction:column;justify-content:center}.plan-principle b{font-size:9px;letter-spacing:1px;color:var(--blue)}.plan-principle span{font-size:9px;color:var(--muted);line-height:1.45;margin-top:5px}
+.plan-phase-head{display:flex;justify-content:space-between;align-items:center;margin:17px 0 8px}.plan-phase-head>div{display:flex;align-items:center;gap:10px}.plan-phase-head b{font-size:10px;letter-spacing:.8px}.plan-phase-head span{display:block;color:var(--muted);font-size:9px;margin-top:2px}.plan-phase-head small{font-size:9px;color:var(--muted)}
+.phase-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:850}.phase-num.blue{background:var(--blue)}.phase-num.amber{background:#b97916}.phase-num.green{background:var(--green)}
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.week-grid.five{grid-template-columns:repeat(5,1fr)}
+.week-card{appearance:none;text-align:left;background:#fff;border:1px solid var(--line);border-radius:7px;padding:13px;min-height:120px;display:flex;flex-direction:column;transition:.16s;box-shadow:0 3px 12px rgba(16,24,32,.025)}
+.week-card:hover{border-color:#9bb9ca;transform:translateY(-2px);box-shadow:0 8px 22px rgba(16,24,32,.08)}.week-card .week-no{font-size:9px;color:var(--blue);font-weight:850;letter-spacing:1px;margin-bottom:8px}.week-card .week-no.amber-text{color:#a96d15}.week-card .week-no.green-text{color:var(--green)}
+.week-card b{font-size:11px;line-height:1.25}.week-card>span:not(.week-no){font-size:9px;color:var(--muted);line-height:1.4;margin-top:5px}.week-card i{font-style:normal;color:var(--blue);font-size:8px;font-weight:800;margin-top:auto;padding-top:9px}
+.plan-modal-backdrop{position:fixed;inset:0;background:rgba(16,24,32,.56);z-index:9999;display:none;align-items:center;justify-content:center;padding:22px}.plan-modal-backdrop.open{display:flex}
+.plan-modal{width:min(900px,96vw);max-height:90vh;overflow:auto;background:var(--paper);border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.7)}
+.plan-modal-head{display:flex;justify-content:space-between;gap:15px;padding:20px 22px 16px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}.plan-modal-kicker{font-size:8px;letter-spacing:1.5px;color:var(--blue);font-weight:850;text-transform:uppercase}.plan-modal-head h2{font-size:24px;margin:4px 0}.plan-modal-head p{font-size:10px;color:var(--muted);margin:0}.plan-modal-close{border:1px solid var(--line);background:#fff;border-radius:5px;width:32px;height:32px;font-size:20px;line-height:1;color:var(--muted)}
+.plan-modal-body{padding:18px 22px 22px}.plan-modal-summary{background:#eef6fb;border-left:3px solid var(--blue);padding:12px 14px;margin-bottom:14px}.plan-modal-summary b{font-size:10px}.plan-modal-summary p{font-size:10px;color:#4e5d66;line-height:1.5;margin:4px 0 0}
+.plan-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.plan-detail-card{background:#fff;border:1px solid var(--line);border-radius:7px;padding:13px}.plan-detail-card h3{font-size:11px;margin:0 0 7px}.plan-detail-card ul{margin:0;padding-left:16px;color:var(--muted);font-size:9px;line-height:1.7}.plan-detail-card p{font-size:9px;color:var(--muted);line-height:1.5;margin:0}
+.plan-deliverable{margin-top:9px;background:#101820;color:#fff;border-radius:7px;padding:13px}.plan-deliverable h3{font-size:10px;margin:0 0 7px}.plan-deliverable p{font-size:9px;color:#b9c5cb;line-height:1.5;margin:0}.plan-gate{margin-top:9px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:13px}.plan-gate b{font-size:9px;color:var(--green);letter-spacing:.7px}.plan-gate p{font-size:10px;font-weight:750;margin:5px 0 0}
+@media(max-width:850px){.plan-hero{display:block}.plan-principle{width:auto;margin-top:12px}.week-grid,.week-grid.five{grid-template-columns:repeat(2,1fr)}.plan-detail-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.week-grid,.week-grid.five{grid-template-columns:1fr}}
+
+
+/* ===== 90-DAY CONTROL TOWER ADDITIONS ===== */
+.plan-subnav{display:flex;gap:6px;flex-wrap:wrap;background:#101820;padding:7px;border-radius:7px;margin:0 0 14px;position:sticky;top:8px;z-index:20}.plan-subnav a{color:#c1ccd2;text-decoration:none;border:1px solid #2d3d47;border-radius:4px;padding:6px 9px;font-size:8px;font-weight:800;letter-spacing:.3px}.plan-subnav a:hover{background:#fff;color:#101820}
+.control-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 15px}.control-tile{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:12px}.control-tile b{font-size:9px;display:block;margin-bottom:4px}.control-tile span{font-size:9px;color:#687780;line-height:1.45}.control-tile.blue{border-top:3px solid var(--blue)}.control-tile.amber{border-top:3px solid #b97916}.control-tile.green{border-top:3px solid var(--green)}.control-tile.red{border-top:3px solid var(--red)}
+.subsection{scroll-margin-top:65px;margin-top:18px}.subhead{display:flex;justify-content:space-between;align-items:end;margin:0 0 8px}.subhead h3{margin:0;font-size:15px;letter-spacing:-.25px}.subhead span{font-size:8px;color:#7a878e}
+.intervention-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.intervention{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:14px;min-height:205px;display:flex;flex-direction:column}.intervention .tag{font-size:8px;font-weight:850;letter-spacing:.8px;color:var(--blue);text-transform:uppercase}.intervention h4{font-size:12px;margin:6px 0}.intervention p{font-size:9px!important;color:#687780!important;line-height:1.5;margin:0 0 8px!important}.intervention .mini{margin-top:auto;border-top:1px solid #edf0f1;padding-top:8px;font-size:8px;color:#55646d;line-height:1.55}.intervention .mini b{color:#101820}.intervention details{margin-top:8px}.intervention summary{cursor:pointer;color:var(--blue);font-size:8px;font-weight:800}.intervention details p{margin-top:7px!important}
+.gate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.gate-card{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:15px;position:relative;overflow:hidden}.gate-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}.gate-card:nth-child(2):before{background:#b97916}.gate-card:nth-child(3):before{background:var(--green)}.gate-card .gate-day{font-size:8px;color:#78868e;letter-spacing:1px;font-weight:850}.gate-card h4{margin:5px 0 7px;font-size:13px}.gate-q{font-size:10px;font-weight:750;line-height:1.45}.gate-options{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}.gate-options span{font-size:8px;font-weight:800;padding:4px 6px;border-radius:99px;border:1px solid #ccd5d9}.gate-options .yes{color:var(--green);border-color:#a8d7c6;background:#f2fbf7}.gate-options .mid{color:#9b711f;border-color:#dfc98e;background:#fffaf0}.gate-options .no{color:var(--red);border-color:#e8b9bd;background:#fff5f5}
+.governance{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#101820;color:#fff;border-radius:7px;overflow:hidden}.gov{padding:16px;border-right:1px solid #31404a}.gov:last-child{border-right:0}.gov .when{font-size:8px;color:#63b9ff;letter-spacing:1px;font-weight:850}.gov h4{font-size:11px;margin:5px 0}.gov p{font-size:9px!important;color:#b7c3c9!important;line-height:1.55;margin:0!important}
+.risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.risk-card{background:#fff;border:1px solid #d5dbde;border-radius:7px;overflow:hidden}.risk-head{display:grid;grid-template-columns:1.4fr .45fr 1.8fr;gap:0;background:#f4f7f8;padding:8px 10px;font-size:8px;color:#718089;font-weight:850}.risk-row{display:grid;grid-template-columns:1.4fr .45fr 1.8fr;gap:0;padding:9px 10px;border-top:1px solid #edf0f1;font-size:9px;color:#53636c;line-height:1.45}.risk-row .high{color:var(--red);font-weight:850}.risk-row .med{color:#a16d1b;font-weight:850}
+.data-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d5dbde;border-radius:7px;overflow:hidden}.data-table th{font-size:8px;background:#f4f7f8;color:#74828a;padding:9px;text-align:left}.data-table td{font-size:9px;padding:9px;border-top:1px solid #edf0f1}.status{font-size:8px;font-weight:850;padding:3px 6px;border-radius:99px}.status.available{background:#edf8f3;color:var(--green)}.status.missing{background:#fff1f1;color:var(--red)}.status.build{background:#fff8e9;color:#9b711f}
+.store-matrix{display:grid;grid-template-columns:1fr 1fr;gap:9px}.situation{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:13px}.situation h4{margin:0 0 5px;font-size:11px}.situation p{margin:0 0 7px!important;font-size:9px!important}.situation .intervention-link{font-size:8px;color:var(--blue);font-weight:850}.decision-tree{background:#101820;color:#fff;border-radius:7px;padding:18px}.decision-tree h3{margin:0 0 12px;font-size:14px}.tree{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:stretch}.tree-step{background:#182630;border:1px solid #2f424d;border-radius:6px;padding:12px}.tree-step b{font-size:9px;color:#63b9ff;display:block;margin-bottom:5px}.tree-step span{font-size:9px;color:#c0cbd0;line-height:1.5}.tree-arrow{display:flex;align-items:center;justify-content:center;color:#5bb4ff;font-size:18px}.tree-outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}.tree-outcome{padding:9px;border-radius:5px;font-size:9px;line-height:1.45}.tree-outcome.blue{background:#17334a}.tree-outcome.amber{background:#3b3020}.tree-outcome.green{background:#17362c}.output-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.output{background:#fff;border:1px solid #d5dbde;border-radius:7px;padding:13px}.output .n{font-size:19px;color:var(--blue);font-weight:850}.output h4{font-size:10px;margin:5px 0}.output p{font-size:8px!important;margin:0!important}
+.plan-note{background:#f0f6f9;border:1px solid #d3e3eb;border-left:3px solid var(--blue);border-radius:0 7px 7px 0;padding:12px 14px;margin-top:10px}.plan-note b{font-size:9px}.plan-note p{font-size:9px!important;margin:4px 0 0!important}
+@media(max-width:1000px){.control-strip,.intervention-grid,.governance,.gate-grid{grid-template-columns:repeat(2,1fr)}.output-grid{grid-template-columns:repeat(3,1fr)}.tree{grid-template-columns:1fr}.tree-arrow{display:none}}
+@media(max-width:650px){.control-strip,.intervention-grid,.gate-grid,.risk-grid,.store-matrix,.governance,.output-grid{grid-template-columns:1fr}.risk-head,.risk-row{grid-template-columns:1fr}.risk-head{display:none}.risk-row{gap:4px}.gov{border-right:0;border-bottom:1px solid #31404a}.gov:last-child{border-bottom:0}}
+
+
+/* 5-slide recommendation system */
+.story-hero{display:flex;justify-content:space-between;gap:22px;align-items:stretch;background:#101820;color:#fff;border-radius:8px;padding:23px 25px;margin-bottom:12px}
+.story-hero .eyebrow{color:#5bb4ff}.story-hero h2{font-size:27px;letter-spacing:-1.1px;margin:5px 0 7px}.story-hero p{font-size:10px;color:#b8c4ca;margin:0;line-height:1.5;max-width:650px}
+.story-bridge{width:330px;border-left:2px solid #5bb4ff;padding:7px 0 7px 15px;display:flex;flex-direction:column;justify-content:center}.story-bridge b{font-size:8px;letter-spacing:1.2px;color:#5bb4ff}.story-bridge span{font-size:10px;line-height:1.5;color:#d2dade;margin-top:5px}
+.story-nav{display:flex;gap:5px;overflow:auto;margin-bottom:12px}.story-tab{border:1px solid var(--line);background:#fff;color:#63717a;border-radius:5px;padding:8px 10px;font-size:8px;font-weight:800;white-space:nowrap}.story-tab.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.story-slide{display:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:var(--shadow)}.story-slide.active{display:block}.story-kicker{font-size:9px;letter-spacing:1.5px;color:var(--blue);font-weight:850}.story-slide h2{font-size:27px;line-height:1.12;letter-spacing:-1.1px;margin:6px 0 9px;max-width:980px}.story-lead{font-size:11px;line-height:1.55;color:var(--muted);max-width:1000px;margin:0 0 17px}
+.story-growth{display:grid;grid-template-columns:1.15fr .85fr;gap:10px}.growth-chart{border:1px solid var(--line);border-radius:7px;padding:14px;background:#fbfcfc}.growth-head{display:flex;justify-content:space-between;margin-bottom:7px}.growth-head b{font-size:10px}.growth-head span{font-size:8px;color:var(--muted)}.growth-row{display:grid;grid-template-columns:1.1fr 1fr 70px;gap:10px;align-items:center;border-top:1px solid #edf0f1;padding:9px 0;font-size:9px}.growth-row:first-of-type{border-top:0}.growth-row span{color:#5d6b73}.growth-row b{font-size:10px}.growth-row em{font-style:normal;color:var(--green);font-weight:800;text-align:right}.story-callout{background:#eef6fb;border-left:3px solid var(--blue);border-radius:5px;padding:17px}.callout-label{font-size:8px;color:var(--blue);font-weight:850;letter-spacing:1px}.story-callout h3{font-size:18px;line-height:1.25;margin:8px 0}.story-callout p{font-size:9px;color:var(--muted);line-height:1.55;margin:0}
+.story-links{display:flex;gap:6px;margin-top:11px}.story-links button,.story-action{border:1px solid #bfcbd1;background:#fff;color:var(--ink);padding:8px 11px;border-radius:5px;font-size:9px;font-weight:800}.story-links button:hover,.story-action:hover{background:#f2f7fa;border-color:#91adbc}
+.matrix-story{display:grid;grid-template-columns:1.35fr .65fr;gap:12px}.matrix-story-visual{height:330px;position:relative;border:1px solid var(--line);border-radius:7px;background:#f7fafb;overflow:hidden}.matrix-story-visual:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#d9e2e6}.matrix-story-visual:after{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:#d9e2e6}.ms-q{position:absolute;font-size:8px;color:#6d7b83;line-height:1.35}.ms-q b{font-size:8px;color:#384850}.ms-q span{display:block;margin-top:3px}.q1{right:10px;top:10px}.q2{left:10px;top:10px}.q3{left:10px;bottom:10px}.q4{right:10px;bottom:10px}.ms-axis-x{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);font-size:8px;color:#7a878e}.ms-axis-y{position:absolute;left:4px;top:50%;transform:rotate(-90deg) translate(-50%,-50%);font-size:8px;color:#7a878e}.ms-dot{position:absolute;width:27px;height:27px;border-radius:50%;background:var(--blue);color:#fff;border:2px solid #fff;display:grid;place-items:center;font-size:7px;font-weight:850;box-shadow:0 2px 7px rgba(0,0,0,.13)}.d1{left:65%;top:34%}.d2{left:57%;top:64%;background:var(--red)}.d3{left:76%;top:27%}.d4{left:69%;top:42%}.d5{left:47%;top:72%;background:#71818a}.d6{left:71%;top:48%;background:var(--red)}.d7{left:35%;top:82%;background:#71818a}.story-side-list{display:grid;gap:7px}.story-side-list div{border:1px solid var(--line);border-radius:6px;padding:11px}.story-side-list b{display:block;font-size:9px}.story-side-list span{display:block;color:var(--muted);font-size:8px;line-height:1.45;margin-top:4px}.story-bottom-note{margin-top:10px;background:#f7fafb;border:1px solid var(--line);padding:10px;border-radius:5px;font-size:9px;color:#5d6b73}.story-action{margin-top:9px;background:var(--blue);border-color:var(--blue);color:#fff}
+.know-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.know-card{border:1px solid var(--line);border-radius:7px;padding:16px}.know-card.missing{background:#fff9f9;border-color:#ead8da}.know-title{font-size:8px;letter-spacing:1px;font-weight:850}.know-title.yes{color:var(--green)}.know-title.no{color:var(--red)}.know-card ul{padding-left:17px;margin:10px 0 0;color:#5f6d75;font-size:9px;line-height:1.65}.missing-link{display:flex;align-items:center;justify-content:center;gap:7px;background:#101820;color:#fff;border-radius:5px;margin-top:10px;padding:11px 6px;font-size:8px}.missing-link i{color:#5bb4ff;font-style:normal}.analysis-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:10px}.analysis-strip span{font-size:9px;color:var(--blue);font-weight:850}.analysis-strip b{font-size:8px;line-height:1.3;border-right:1px solid var(--line);padding-right:6px}
+.three-stage{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stage{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:7px;padding:15px;background:#fff}.stage.amber-stage{border-top-color:#b97916}.stage.green-stage{border-top-color:var(--green)}.stage-top{display:flex;justify-content:space-between;align-items:center}.stage-top span{font-size:22px;font-weight:850;color:var(--blue)}.amber-stage .stage-top span{color:#b97916}.green-stage .stage-top span{color:var(--green)}.stage-top small{font-size:8px;color:var(--muted);font-weight:800}.stage h3{font-size:14px;margin:2px 0 4px}.stage>b{font-size:9px}.stage ul{padding-left:15px;color:var(--muted);font-size:9px;line-height:1.65}.stage-output{margin-top:10px;background:#f5f8f9;padding:9px;border-radius:4px;font-size:7px;letter-spacing:.7px;color:#718089}.stage-output strong{font-size:9px;letter-spacing:0;color:var(--ink)}.intervention-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}.intervention-row div{background:#f7fafb;border:1px solid var(--line);padding:10px;border-radius:5px}.intervention-row b{display:block;font-size:8px}.intervention-row span{display:block;font-size:8px;color:var(--muted);margin-top:4px}
+.measurement-flow{display:grid;grid-template-columns:1fr 18px 1fr 18px 1.15fr 18px 1fr 18px 1fr;gap:5px;align-items:stretch}.measurement-flow>div{border:1px solid var(--line);border-radius:6px;padding:11px;background:#fbfcfc}.measurement-flow .focus{border-color:var(--blue);background:#eef6fb}.measurement-flow span{display:block;font-size:17px;font-weight:850;color:var(--blue)}.measurement-flow b{display:block;font-size:8px;letter-spacing:.6px;margin-top:3px}.measurement-flow small{display:block;color:var(--muted);font-size:7px;line-height:1.35;margin-top:4px}.measurement-flow p{font-size:8px;line-height:1.4;color:#4f5d65;margin:7px 0 0}.measurement-flow>i{display:grid;place-items:center;color:#9aa7ad;font-style:normal;font-size:13px}.decision-gates{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px}.decision-gates div{border:1px solid var(--line);border-radius:6px;padding:13px}.decision-gates span{font-size:8px;color:var(--blue);font-weight:850;letter-spacing:1px}.decision-gates b{display:block;font-size:10px;margin-top:4px}.decision-gates p{font-size:10px;font-weight:750;margin:6px 0}.decision-gates small{font-size:8px;color:var(--muted)}.final-message{margin-top:11px;background:#101820;color:#fff;border-radius:7px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:14px}.final-message b{display:block;color:#5bb4ff;font-size:10px;letter-spacing:.8px}.final-message span{display:block;color:#b8c4ca;font-size:8px;line-height:1.45;margin-top:4px;max-width:700px}.final-message button{background:#fff;border:0;border-radius:5px;padding:9px 11px;color:var(--ink);font-size:8px;font-weight:850;white-space:nowrap}
+.story-footer{display:flex;gap:12px;align-items:center;margin-top:12px;font-size:8px;color:var(--muted)}.story-footer span{color:var(--blue);font-weight:850;letter-spacing:1px}.story-footer b{color:#52616a}.story-footer small{margin-left:auto}
+@media(max-width:950px){.story-hero{display:block}.story-bridge{width:auto;margin-top:12px}.story-growth,.matrix-story,.know-grid{grid-template-columns:1fr}.three-stage{grid-template-columns:1fr}.measurement-flow{grid-template-columns:1fr}.measurement-flow>i{display:none}.analysis-strip{grid-template-columns:repeat(3,1fr)}.intervention-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.story-slide{padding:17px}.story-slide h2{font-size:22px}.analysis-strip,.decision-gates,.intervention-row{grid-template-columns:1fr}.story-footer{display:block}.story-footer small{display:block;margin-top:6px}}
+
+
+/* Exact supplied Ray-Ban + Channelplay brand marks */
+.brand-strip{background:#fff;border-bottom:1px solid #d8dde0;position:sticky;top:0;z-index:900;height:78px}
+.brand-inner{height:78px;max-width:1320px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:14px}
+.brand-logo-rb{width:81px;height:58px;object-fit:contain;display:block}
+.brand-logo-cp{width:194px;height:40px;object-fit:contain;display:block}
+.brand-divider{height:34px;width:1px;background:#cfd6da;margin:0 2px}
+.brand-context{display:flex;flex-direction:column;gap:3px;margin-left:4px}
+.brand-context b{font-size:11px;letter-spacing:.8px;color:#18242c}
+.brand-context span{font-size:8px;color:#77858d;letter-spacing:.15px}
+@media(max-width:650px){
+  .brand-strip,.brand-inner{height:66px}
+  .brand-inner{padding:0 12px;gap:8px}
+  .brand-logo-rb{width:58px;height:42px}
+  .brand-logo-cp{width:126px;height:30px}
+  .brand-divider{height:25px}
+  .brand-context{display:none}
+}
 </style>
 </head>
 <body>
+
+<div class="brand-strip">
+  <div class="brand-inner">
+    <img class="brand-logo-rb" src="data:image/png;base64,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" alt="Ray-Ban logo"><div class="brand-divider"></div><img class="brand-logo-cp" src="data:image/png;base64,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" alt="Channelplay logo">
+    <div class="brand-divider"></div>
+    <div class="brand-context">
+      <b>RB META / CASE LAB</b>
+      <span>Assisted Selling Program · Program Management Command Center</span>
+    </div>
+  </div>
+</div>
+
 <div class="app">
 <aside class="side">
   <div class="brand">RB META / CASE LAB</div>
@@ -259,34 +341,400 @@ table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;colo
     </div>
   </section>
 
-  <section class="view" id="plan">
-    <div class="road">
-      <div class="phase"><h3>01 · DAYS 1–30 · DIAGNOSE</h3><span class="pill action">OWNER: PROGRAM</span><ul><li>Build promoter × store × funnel view.</li><li>Categorise all feedback consistently.</li><li>Segment stores by activity and conversion.</li><li>Identify high-variance stores.</li></ul></div>
-      <div class="phase"><h3>02 · DAYS 31–60 · PILOT</h3><span class="pill action">OWNER: FIELD + TRAINING</span><ul><li>Test use-case-led demos.</li><li>Strengthen store-team product enablement.</li><li>Test objection handling.</li><li>Introduce conversion-focused measures.</li></ul></div>
-      <div class="phase"><h3>03 · DAYS 61–90 · SCALE</h3><span class="pill action">OWNER: PROGRAM + CLIENT</span><ul><li>Compare pilot against baseline.</li><li>Replicate practices associated with stronger conversion.</li><li>Identify genuinely capacity-constrained stores.</li><li>Decide where incremental hiring is justified.</li></ul></div>
+  
+<section class="view" id="plan">
+  <div class="plan-hero">
+    <div>
+      <div class="eyebrow">90-DAY PROGRAM MANAGEMENT PLAN</div>
+      <h2>Diagnose. Pilot. Scale.</h2>
+      <p>Every week has a defined objective, action set, output and decision. Click any week to open the detailed management plan.</p>
     </div>
-    <div class="card section"><h2>90-day scorecard</h2><div class="grid g4">
+    <div class="plan-principle"><b>CAPACITY SHOULD FOLLOW EVIDENCE — NOT PRECEDE IT.</b><span>Use the first 30 days to locate the constraint before changing headcount.</span></div>
+  </div>
+
+  <div class="plan-phase-head">
+    <div><span class="phase-num blue">01</span><div><b>DAYS 1–30 · DIAGNOSE</b><span>Find the constraint</span></div></div>
+    <small>Weeks 1–4</small>
+  </div>
+  <div class="week-grid">
+    <button class="week-card" onclick="openPlanWeek(1)">
+      <span class="week-no">W01</span><b>Build the control dataset</b><span>Link promoter × store × week × funnel.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(2)">
+      <span class="week-no">W02</span><b>Diagnose the store funnel</b><span>Separate activity from conversion.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(3)">
+      <span class="week-no">W03</span><b>Decode customer voice</b><span>Turn qualitative feedback into testable themes.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(4)">
+      <span class="week-no">W04</span><b>Set store diagnostic profiles</b><span>Define the constraint to test in each store.</span><i>Open details →</i>
+    </button>
+  </div>
+
+  <div class="plan-phase-head">
+    <div><span class="phase-num amber">02</span><div><b>DAYS 31–60 · PILOT</b><span>Test targeted interventions</span></div></div>
+    <small>Weeks 5–8</small>
+  </div>
+  <div class="week-grid">
+    <button class="week-card" onclick="openPlanWeek(5)">
+      <span class="week-no amber-text">W05</span><b>Design the pilot</b><span>Select stores, interventions and baselines.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(6)">
+      <span class="week-no amber-text">W06</span><b>Launch targeted demos</b><span>Test use-case-led demonstration structure.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(7)">
+      <span class="week-no amber-text">W07</span><b>Test objection handling</b><span>Standardise responses to recurring friction.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(8)">
+      <span class="week-no amber-text">W08</span><b>Enable store teams</b><span>Improve customer referral into the promoter.</span><i>Open details →</i>
+    </button>
+  </div>
+
+  <div class="plan-phase-head">
+    <div><span class="phase-num green">03</span><div><b>DAYS 61–90 · SCALE</b><span>Scale what works</span></div></div>
+    <small>Weeks 9–13</small>
+  </div>
+  <div class="week-grid five">
+    <button class="week-card" onclick="openPlanWeek(9)">
+      <span class="week-no green-text">W09</span><b>Mid-pilot review</b><span>Compare intervention performance with baseline.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(10)">
+      <span class="week-no green-text">W10</span><b>Prepare scale decisions</b><span>Identify practices ready for replication.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(11)">
+      <span class="week-no green-text">W11</span><b>Build the playbook</b><span>Convert validated practices into standards.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(12)">
+      <span class="week-no green-text">W12</span><b>Roll out & enable</b><span>Deploy proven practices across relevant stores.</span><i>Open details →</i>
+    </button>
+    <button class="week-card" onclick="openPlanWeek(13)">
+      <span class="week-no green-text">W13</span><b>Final evaluation</b><span>Make the Day-90 scale and capacity decision.</span><i>Open details →</i>
+    </button>
+  </div>
+
+  <div class="card section">
+    <h2>90-day scorecard</h2>
+    <div class="grid g4">
       <div><span class="pill">LEADING</span><p>Demos<br>Enquiries<br>App activations<br>Attendance<br>Store referrals</p></div>
       <div><span class="pill">CONVERSION</span><p>Demo → enquiry<br>Enquiry → activation<br>Demo → sale<br>Enquiry → sale</p></div>
       <div><span class="pill">BUSINESS</span><p>Units<br>Revenue</p></div>
       <div><span class="pill">EXPERIENCE</span><p>Complaints<br>Customer feedback<br>Manager feedback</p></div>
-    </div></div>
-  </section>
-
-  <section class="view" id="story">
-    <div class="card"><div class="eyebrow">COMPETITION MODE</div><h2 style="font-size:25px;margin-top:5px">The 5-slide recommendation</h2>
-      <div class="story">
-        <div class="storyrow"><div class="num">01</div><b>Diagnosis</b><span>Program activity and output are growing, but store performance is heterogeneous and the current dataset does not explain the variance.</span></div>
-        <div class="storyrow"><div class="num">02</div><b>Evidence</b><span>Six-week growth is positive; the 14 displayed stores show different combinations of demo intensity and demo-to-sale conversion; customer feedback points to multiple potential friction points.</span></div>
-        <div class="storyrow"><div class="num">03</div><b>Questions</b><span>Build the missing promoter × store × funnel linkage and quantify objections, store referrals and return-visit outcomes before structural changes.</span></div>
-        <div class="storyrow"><div class="num">04</div><b>90-day plan</b><span>Diagnose first, run targeted pilots second, then scale only the practices supported by the pilot evidence.</span></div>
-        <div class="storyrow"><div class="num">05</div><b>Measures</b><span>Track activity, conversion, business output and experience together; use conversion as the bridge between deployment and category building.</span></div>
-      </div>
-      <div class="callout"><b>Closing message:</b> Don’t solve a conversion problem with capacity. Use the next 90 days to establish where capacity is actually the constraint, then deploy it where the evidence supports it.</div>
     </div>
-  </section>
+  </div>
 
-  <div class="footer">Source: “The Smart Glasses Problem: A Program Management Case.” All displayed calculations are derived from case exhibits. Hypotheses and proposed interventions are explicitly labelled.</div>
+  <div class="plan-subnav">
+    <a href="#timeline90">TIMELINE</a><a href="#interventions90">INTERVENTIONS</a><a href="#gates90">DECISION GATES</a><a href="#governance90">GOVERNANCE</a><a href="#risks90">RISKS</a><a href="#data90">DATA TRACKER</a><a href="#store90">STORE MATRIX</a><a href="#decision90">DECISION TREE</a><a href="#outputs90">DAY-90 OUTPUTS</a>
+  </div>
+  <div class="control-strip">
+    <div class="control-tile blue"><b>DAY 30</b><span>Locate the funnel constraint and establish the pilot baseline.</span></div>
+    <div class="control-tile amber"><b>DAY 60</b><span>Evaluate intervention signals and decide what continues.</span></div>
+    <div class="control-tile green"><b>DAY 90</b><span>Standardise validated practices and make the capacity decision.</span></div>
+    <div class="control-tile red"><b>GUARDRAIL</b><span>Do not treat KPI movement as causal evidence without a credible comparison.</span></div>
+  </div>
+
+  <div class="subsection" id="timeline90"><div class="subhead"><h3>90-day execution timeline</h3><span>Click any week above for detailed execution</span></div></div>
+
+  <div class="subsection" id="interventions90">
+    <div class="subhead"><h3>Intervention library</h3><span>Proposed tests derived from case evidence and hypotheses</span></div>
+    <div class="intervention-grid">
+      <div class="intervention"><div class="tag">01 · Conversion</div><h4>Use-case-led demo</h4><p>Test whether a more structured customer journey improves engagement and conversion where category/use-case clarity is a suspected friction.</p><div class="mini"><b>Primary:</b> Demo → enquiry<br><b>Secondary:</b> Demo → sale<br><b>Data:</b> Store × promoter × week × funnel</div><details><summary>What changes?</summary><p>Identify → qualify → demonstrate → resolve concern → conversion ask. Keep the product and core program unchanged.</p></details></div>
+      <div class="intervention"><div class="tag">02 · Objections</div><h4>Objection-handling playbook</h4><p>Test consistent responses to objections explicitly surfaced in the case, including price, privacy, prescription and comparison concerns.</p><div class="mini"><b>Primary:</b> Enquiry → sale<br><b>Secondary:</b> Demo → sale<br><b>Data:</b> Reason-coded objections</div><details><summary>What changes?</summary><p>Record objection type, apply a consistent response structure and compare conversion against baseline.</p></details></div>
+      <div class="intervention"><div class="tag">03 · Store execution</div><h4>Store-team referral</h4><p>Test whether concise store-team enablement increases qualified customer opportunities reaching the promoter.</p><div class="mini"><b>Primary:</b> Store referrals<br><b>Secondary:</b> Referral → demo / sale<br><b>Data:</b> Referral source</div><details><summary>What changes?</summary><p>Brief store staff on what the product is, who to refer and how to hand over the customer.</p></details></div>
+      <div class="intervention"><div class="tag">04 · Availability</div><h4>Promoter availability</h4><p>Test whether missed interactions or return visits create measurable conversion leakage in stores where this issue appears.</p><div class="mini"><b>Primary:</b> Return-visit conversion<br><b>Secondary:</b> Complaints<br><b>Data:</b> Availability / return outcome</div><details><summary>What changes?</summary><p>Capture missed interactions and subsequent outcomes rather than assuming availability is the cause.</p></details></div>
+    </div>
+    <div class="plan-note"><b>INTERVENTION RULE</b><p>One diagnosed problem → one targeted intervention → one primary KPI → one decision. The interventions are proposed tests, not established causal explanations.</p></div>
+  </div>
+
+  <div class="subsection" id="gates90">
+    <div class="subhead"><h3>Decision gates</h3><span>Three management moments</span></div>
+    <div class="gate-grid">
+      <div class="gate-card"><div class="gate-day">DAY 30 · DIAGNOSTIC GATE</div><h4>Where is the funnel breaking?</h4><div class="gate-q">Decision: are we ready to run targeted pilots?</div><div class="gate-options"><span class="yes">READY</span><span class="mid">MORE DATA</span><span class="no">NO CLEAR TEST</span></div></div>
+      <div class="gate-card"><div class="gate-day">DAY 60 · PILOT GATE</div><h4>Which intervention shows a signal?</h4><div class="gate-q">Decision: which interventions scale, refine or stop?</div><div class="gate-options"><span class="yes">SCALE</span><span class="mid">REFINE</span><span class="no">STOP</span></div></div>
+      <div class="gate-card"><div class="gate-day">DAY 90 · SCALE GATE</div><h4>What becomes standard practice?</h4><div class="gate-q">Decision: what is replicated and where, if anywhere, is capacity justified?</div><div class="gate-options"><span class="yes">STANDARDISE</span><span class="mid">CONTINUE TESTING</span><span class="no">DO NOT SCALE</span></div></div>
+    </div>
+  </div>
+
+  <div class="subsection" id="governance90">
+    <div class="subhead"><h3>90-day governance rhythm</h3><span>Capture → Diagnose → Review → Decide</span></div>
+    <div class="governance">
+      <div class="gov"><div class="when">DAILY</div><h4>Capture</h4><p>Attendance · availability · demonstrations · enquiries · units. Keep the operating data current.</p></div>
+      <div class="gov"><div class="when">WEEKLY</div><h4>Diagnose</h4><p>Store funnel · conversion · complaints · feedback · intervention adherence. Identify variance.</p></div>
+      <div class="gov"><div class="when">BI-WEEKLY</div><h4>Review</h4><p>Program Manager + client review pilot signals, implementation quality and unresolved data gaps.</p></div>
+      <div class="gov"><div class="when">DAY 30 / 60 / 90</div><h4>Gate</h4><p>Make explicit decisions on pilot readiness, intervention continuation and scale/capacity.</p></div>
+    </div>
+  </div>
+
+  <div class="subsection" id="risks90">
+    <div class="subhead"><h3>90-day risk register</h3><span>Risks to the intervention, not just the business</span></div>
+    <div class="risk-card">
+      <div class="risk-head"><span>RISK</span><span>LEVEL</span><span>MITIGATION</span></div>
+      <div class="risk-row"><span>Promoter ↔ store linkage unavailable</span><span class="high">HIGH</span><span>Build the master mapping in Week 1 before attributing store outcomes to individuals.</span></div>
+      <div class="risk-row"><span>Store referrals are not captured</span><span class="high">HIGH</span><span>Add a referral field and define a consistent referral event.</span></div>
+      <div class="risk-row"><span>Feedback remains qualitative</span><span class="med">MED</span><span>Code feedback into a consistent taxonomy and map themes to measurable KPIs.</span></div>
+      <div class="risk-row"><span>Pilot execution varies by store</span><span class="high">HIGH</span><span>Use an intervention checklist and track adherence alongside outcomes.</span></div>
+      <div class="risk-row"><span>Activity rises but conversion does not</span><span class="high">HIGH</span><span>Track funnel rates, not only units and revenue.</span></div>
+      <div class="risk-row"><span>Intervention effect is unclear</span><span class="high">HIGH</span><span>Establish a pre-pilot baseline and use comparable measurement windows.</span></div>
+      <div class="risk-row"><span>Capacity added too early</span><span class="high">HIGH</span><span>Gate headcount decisions until the activity-versus-conversion constraint is understood.</span></div>
+      <div class="risk-row"><span>Pilot creates excessive reporting burden</span><span class="med">MED</span><span>Limit the pilot to decision-relevant fields and keep the scorecard compact.</span></div>
+    </div>
+  </div>
+
+  <div class="subsection" id="data90">
+    <div class="subhead"><h3>Data requirements tracker</h3><span>What we have vs what the 90-day plan needs</span></div>
+    <table class="data-table"><thead><tr><th>Data element</th><th>Status</th><th>90-day action</th><th>Why it matters</th></tr></thead><tbody>
+      <tr><td>Weekly program data</td><td><span class="status available">AVAILABLE</span></td><td>Use as operating baseline</td><td>Track overall movement</td></tr>
+      <tr><td>Displayed store data</td><td><span class="status available">AVAILABLE</span></td><td>Use for diagnostic framework</td><td>Compare activity and conversion</td></tr>
+      <tr><td>Displayed promoter data</td><td><span class="status available">AVAILABLE</span></td><td>Link where mapping permits</td><td>Understand productivity variation</td></tr>
+      <tr><td>Promoter → store mapping</td><td><span class="status missing">MISSING</span></td><td>Build in Week 1</td><td>Attribute outcomes correctly</td></tr>
+      <tr><td>Weekly store funnel</td><td><span class="status missing">MISSING</span></td><td>Capture from pilot start</td><td>Locate the weekly constraint</td></tr>
+      <tr><td>Store referrals</td><td><span class="status missing">MISSING</span></td><td>Add referral field</td><td>Test store-team contribution</td></tr>
+      <tr><td>Reason-coded objections</td><td><span class="status missing">MISSING</span></td><td>Introduce in pilot</td><td>Quantify purchase friction</td></tr>
+      <tr><td>Return-visit outcomes</td><td><span class="status missing">MISSING</span></td><td>Capture where relevant</td><td>Test availability leakage</td></tr>
+      <tr><td>Recruitment source × productivity</td><td><span class="status missing">MISSING</span></td><td>Link after joining</td><td>Evaluate hiring quality</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="subsection" id="store90">
+    <div class="subhead"><h3>Store intervention matrix</h3><span>Connect Store Lab to the 90-day plan</span></div>
+    <div class="store-matrix">
+      <div class="situation"><h4>Low activity + high conversion</h4><p>Question: can we generate more qualified opportunities without changing a selling approach that already converts?</p><div class="intervention-link">Relevant tests → store referral / availability</div></div>
+      <div class="situation"><h4>High activity + high conversion</h4><p>Question: what practices are worth observing and replicating across comparable stores?</p><div class="intervention-link">Relevant tests → practice replication</div></div>
+      <div class="situation"><h4>High activity + low conversion</h4><p>Question: why aren't demonstrations translating into purchases?</p><div class="intervention-link">Relevant tests → qualification / objection handling / demo structure</div></div>
+      <div class="situation"><h4>Low activity + low conversion</h4><p>Question: is the constraint earlier in the funnel, and what evidence is needed before changing capacity?</p><div class="intervention-link">Relevant tests → diagnose first / referral / availability</div></div>
+    </div>
+    <div class="plan-note"><b>HOW TO USE THIS</b><p>Select the store in Store Lab, identify its activity/conversion situation, then route it to the relevant 90-day intervention rather than applying the same solution to every store.</p></div>
+  </div>
+
+  <div class="subsection" id="decision90">
+    <div class="subhead"><h3>Should we add more promoters?</h3><span>Decision tree</span></div>
+    <div class="decision-tree">
+      <h3>Capacity should follow evidence</h3>
+      <div class="tree">
+        <div class="tree-step"><b>STEP 01</b><span>Is activity low relative to the store's context?</span></div><div class="tree-arrow">→</div><div class="tree-step"><b>STEP 02</b><span>Is conversion also low, or is the existing selling execution strong?</span></div>
+      </div>
+      <div class="tree-outcomes"><div class="tree-outcome blue"><b>LOW ACTIVITY</b><br>Investigate availability, store referrals and capacity before assuming headcount is the answer.</div><div class="tree-outcome amber"><b>HIGH ACTIVITY + LOW CONVERSION</b><br>Investigate qualification, objections and demo-to-sale execution before adding capacity.</div><div class="tree-outcome green"><b>STRONG ACTIVITY + STRONG CONVERSION</b><br>If activity remains constrained despite strong execution, capacity becomes a testable option.</div></div>
+    </div>
+  </div>
+
+  <div class="subsection" id="outputs90">
+    <div class="subhead"><h3>Day-90 program management pack</h3><span>Tangible outputs at the end of the cycle</span></div>
+    <div class="output-grid">
+      <div class="output"><div class="n">01</div><h4>Store Playbook</h4><p>Practices associated with stronger store execution and conversion.</p></div>
+      <div class="output"><div class="n">02</div><h4>Promoter Playbook</h4><p>Validated demonstration and objection-handling standards.</p></div>
+      <div class="output"><div class="n">03</div><h4>Store Enablement Guide</h4><p>Simple referral and product-awareness routine for store teams.</p></div>
+      <div class="output"><div class="n">04</div><h4>Funnel Dashboard</h4><p>Weekly view of activity, conversion, business and experience.</p></div>
+      <div class="output"><div class="n">05</div><h4>Capacity Recommendation</h4><p>Evidence-based view of where additional capacity may be justified.</p></div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="view" id="story">
+  <div class="story-hero">
+    <div>
+      <div class="eyebrow">COMPETITION MODE · 5-SLIDE RECOMMENDATION</div>
+      <h2>From activity to repeatable store performance.</h2>
+      <p>Five slides tell the management story. Every slide links back to the underlying evidence in the control tower.</p>
+    </div>
+    <div class="story-bridge">
+      <b>THE STORY IN ONE LINE</b>
+      <span>Activity is growing → store performance varies → the mechanism is not yet linked → diagnose → pilot → scale.</span>
+    </div>
+  </div>
+
+  <div class="story-nav">
+    <button class="story-tab active" onclick="storySlide(1)">01 · WHAT IS HAPPENING?</button>
+    <button class="story-tab" onclick="storySlide(2)">02 · WHERE IS THE PROBLEM?</button>
+    <button class="story-tab" onclick="storySlide(3)">03 · WHAT DO WE NEED TO KNOW?</button>
+    <button class="story-tab" onclick="storySlide(4)">04 · WHAT SHOULD WE DO?</button>
+    <button class="story-tab" onclick="storySlide(5)">05 · HOW WILL WE KNOW?</button>
+  </div>
+
+  <article class="story-slide active" id="story1">
+    <div class="story-kicker">01 · WHAT IS HAPPENING?</div>
+    <h2>The program is scaling activity — but the category-building question remains unresolved.</h2>
+    <p class="story-lead">The program is generating meaningful customer activity and commercial output, but store-level performance is heterogeneous and the current data does not explain why.</p>
+
+    <div class="story-growth">
+      <div class="growth-chart">
+        <div class="growth-head"><b>W1 → W6</b><span>Program dashboard</span></div>
+        <div class="growth-row"><span>Demonstrations</span><b>1,184 → 1,476</b><em>+24.7%</em></div>
+        <div class="growth-row"><span>Enquiries</span><b>417 → 511</b><em>+22.5%</em></div>
+        <div class="growth-row"><span>Units</span><b>92 → 111</b><em>+20.7%</em></div>
+        <div class="growth-row"><span>Revenue</span><b>₹38.4L → ₹47.1L</b><em>+22.7%</em></div>
+        <div class="growth-row"><span>App activations</span><b>71 → 88</b><em>+23.9%</em></div>
+        <div class="growth-row"><span>Training</span><b>88% → 96%</b><em>+8 pp</em></div>
+      </div>
+      <div class="story-callout">
+        <span class="callout-label">THE MANAGEMENT QUESTION</span>
+        <h3>“We have people in the stores, but are we actually building the category?”</h3>
+        <p>Growth in activity is encouraging, but it does not by itself establish that the assisted-selling model is consistently converting customer interaction into category adoption.</p>
+      </div>
+    </div>
+
+    <div class="story-links">
+      <button onclick="show('program')">Explore Program Trends →</button>
+      <button onclick="show('stores')">Open Store Lab →</button>
+    </div>
+  </article>
+
+  <article class="story-slide" id="story2">
+    <div class="story-kicker">02 · WHERE IS THE PROBLEM?</div>
+    <h2>The constraint is not uniform: stores appear to face different funnel situations.</h2>
+    <p class="story-lead">The displayed store rows show different combinations of activity intensity and demo-to-sale conversion. That argues for targeted diagnosis rather than one intervention for every store.</p>
+
+    <div class="matrix-story">
+      <div class="matrix-story-visual">
+        <div class="ms-q q1"><b>HIGH ACTIVITY<br>HIGH CONVERSION</b><span>Learn & replicate practices</span></div>
+        <div class="ms-q q2"><b>LOW ACTIVITY<br>HIGH CONVERSION</b><span>Investigate opportunity generation</span></div>
+        <div class="ms-q q3"><b>LOW ACTIVITY<br>LOW CONVERSION</b><span>Locate the early-funnel constraint</span></div>
+        <div class="ms-q q4"><b>HIGH ACTIVITY<br>LOW CONVERSION</b><span>Investigate qualification & objections</span></div>
+        <div class="ms-axis-x">Demonstrations / promoter-present day →</div>
+        <div class="ms-axis-y">Demo → unit conversion</div>
+        <div class="ms-dot d1">S01</div><div class="ms-dot d2">S03</div><div class="ms-dot d3">S04</div><div class="ms-dot d4">S08</div><div class="ms-dot d5">S09</div><div class="ms-dot d6">S10</div><div class="ms-dot d7">S13</div>
+      </div>
+      <div class="story-side-list">
+        <div><b>High activity + high conversion</b><span>Ask what practices can be replicated.</span></div>
+        <div><b>High activity + low conversion</b><span>Ask why demonstrations are not translating into sales.</span></div>
+        <div><b>Low activity + high conversion</b><span>Ask whether qualified opportunities are being generated.</span></div>
+        <div><b>Low activity + low conversion</b><span>Diagnose the earliest point of funnel leakage.</span></div>
+      </div>
+    </div>
+
+    <div class="story-bottom-note"><b>Key implication:</b> The same intervention should not be applied to every store.</div>
+    <button class="story-action" onclick="show('stores')">Open interactive Store Performance Matrix →</button>
+  </article>
+
+  <article class="story-slide" id="story3">
+    <div class="story-kicker">03 · WHAT DO WE NEED TO KNOW?</div>
+    <h2>The current data shows the outcome — but not the mechanism.</h2>
+    <p class="story-lead">We have useful program, store, promoter and customer-voice data. The missing layer is the linked <b>Promoter → Store → Week → Customer Funnel</b>.</p>
+
+    <div class="know-grid">
+      <div class="know-card">
+        <span class="know-title yes">WHAT WE KNOW</span>
+        <ul>
+          <li><b>Program:</b> weekly activity, units, revenue, enquiries, activations, attendance, training</li>
+          <li><b>Store:</b> footfall, presence, demonstrations, enquiries, units, ASP, rating</li>
+          <li><b>Promoter:</b> tenure, category, training, attendance, demos, units, incentive</li>
+          <li><b>Customer voice:</b> clarity, price, privacy, prescription, referrals, availability and demo feedback</li>
+        </ul>
+      </div>
+      <div class="know-card missing">
+        <span class="know-title no">WHAT WE DON'T KNOW</span>
+        <div class="missing-link">
+          <div>Promoter</div><i>→</i><div>Store</div><i>→</i><div>Week</div><i>→</i><div>Funnel</div>
+        </div>
+        <ul>
+          <li>Which promoter practices drive conversion?</li>
+          <li>Which store practices drive referrals?</li>
+          <li>Which objections explain lost sales?</li>
+          <li>Which stores are genuinely capacity constrained?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="analysis-strip">
+      <span>01</span><b>Promoter × store mapping</b>
+      <span>02</span><b>Weekly store funnel</b>
+      <span>03</span><b>Reason-coded objections</b>
+      <span>04</span><b>Store referral tracking</b>
+      <span>05</span><b>Return-visit outcomes</b>
+      <span>06</span><b>Recruitment source × productivity</b>
+    </div>
+
+    <div class="story-bottom-note"><b>Recommendation:</b> Before structural changes, build the evidence layer that connects deployment to conversion.</div>
+    <button class="story-action" onclick="show('gaps')">Explore Data Gaps & Questions →</button>
+  </article>
+
+  <article class="story-slide" id="story4">
+    <div class="story-kicker">04 · WHAT SHOULD WE DO IN THE NEXT 90 DAYS?</div>
+    <h2>Diagnose → Pilot → Scale</h2>
+    <p class="story-lead">Use the first 30 days to locate the constraint, the next 30 to test targeted interventions, and the final 30 to institutionalise what the evidence supports.</p>
+
+    <div class="three-stage">
+      <div class="stage blue-stage">
+        <div class="stage-top"><span>01</span><small>DAYS 1–30</small></div>
+        <h3>DIAGNOSE</h3>
+        <b>Build the missing evidence layer</b>
+        <ul><li>Promoter × store × week dataset</li><li>Store-level funnel</li><li>Customer feedback coding</li><li>Activity × conversion segmentation</li><li>Priority constraints</li></ul>
+        <div class="stage-output">OUTPUT<br><strong>Store diagnostic profiles + pilot design</strong></div>
+      </div>
+      <div class="stage amber-stage">
+        <div class="stage-top"><span>02</span><small>DAYS 31–60</small></div>
+        <h3>PILOT</h3>
+        <b>Test interventions against specific constraints</b>
+        <ul><li>Use-case-led demonstrations</li><li>Objection-handling playbook</li><li>Store-team referral enablement</li><li>Promoter availability discipline</li></ul>
+        <div class="stage-output">OUTPUT<br><strong>Evidence on intervention effectiveness</strong></div>
+      </div>
+      <div class="stage green-stage">
+        <div class="stage-top"><span>03</span><small>DAYS 61–90</small></div>
+        <h3>SCALE</h3>
+        <b>Institutionalise what works</b>
+        <ul><li>Compare pilot vs baseline</li><li>Replicate validated practices</li><li>Build operating playbooks</li><li>Establish weekly funnel dashboard</li><li>Evaluate capacity only where justified</li></ul>
+        <div class="stage-output">OUTPUT<br><strong>Standard operating model + capacity recommendation</strong></div>
+      </div>
+    </div>
+
+    <div class="intervention-row">
+      <div><b>01 · Use-case-led demo</b><span>Test customer clarity and engagement.</span></div>
+      <div><b>02 · Objection handling</b><span>Test purchase friction.</span></div>
+      <div><b>03 · Store referral</b><span>Test opportunity generation.</span></div>
+      <div><b>04 · Availability</b><span>Test missed-interaction leakage.</span></div>
+    </div>
+    <button class="story-action" onclick="show('plan')">Open detailed 90-Day Control Tower →</button>
+  </article>
+
+  <article class="story-slide" id="story5">
+    <div class="story-kicker">05 · HOW WILL WE KNOW IT WORKED?</div>
+    <h2>Measure category building as a funnel — not just as headcount or sales.</h2>
+    <p class="story-lead">The program should be managed through a connected measurement architecture and three explicit decision gates.</p>
+
+    <div class="measurement-flow">
+      <div><span>01</span><b>ACTIVITY</b><small>Are we creating enough interactions?</small><p>Attendance · Demonstrations · Store referrals</p></div>
+      <i>→</i>
+      <div><span>02</span><b>ENGAGEMENT</b><small>Are customers responding?</small><p>Enquiries · App activations</p></div>
+      <i>→</i>
+      <div class="focus"><span>03</span><b>CONVERSION</b><small>Is engagement becoming purchase?</small><p>Demo → enquiry · Enquiry → sale · Demo → sale</p></div>
+      <i>→</i>
+      <div><span>04</span><b>BUSINESS</b><small>Is output improving?</small><p>Units · Revenue</p></div>
+      <i>→</i>
+      <div><span>05</span><b>EXPERIENCE</b><small>Is the model sustainable?</small><p>Complaints · Customer feedback · Manager feedback</p></div>
+    </div>
+
+    <div class="decision-gates">
+      <div><span>DAY 30</span><b>DIAGNOSTIC GATE</b><p>Do we know the constraint?</p><small>No → collect evidence · Yes → pilot</small></div>
+      <div><span>DAY 60</span><b>PILOT GATE</b><p>Does the intervention show evidence of improvement?</p><small>Yes → scale · Unclear → refine · No → stop</small></div>
+      <div><span>DAY 90</span><b>SCALE GATE</b><p>What should become standard practice?</p><small>Standardise → Replicate → Monitor</small></div>
+    </div>
+
+    <div class="final-message">
+      <div><b>DON'T SOLVE A CONVERSION PROBLEM WITH CAPACITY.</b><span>Consider additional capacity only where evidence indicates that capacity is genuinely constraining activity despite strong execution.</span></div>
+      <button onclick="show('plan')">See the full 90-day execution plan →</button>
+    </div>
+  </article>
+
+  <div class="story-footer">
+    <span>5-SLIDE STORY</span>
+    <b>Conclusion → Evidence → Diagnostic → Intervention → Measurement</b>
+    <small>All case facts and calculations are derived from the supplied case exhibits. Proposed interventions and hypotheses are explicitly labelled.</small>
+  </div>
+</section>
+
+
+  
+<div class="plan-modal-backdrop" id="planModal" role="dialog" aria-modal="true" aria-labelledby="planModalTitle">
+  <div class="plan-modal">
+    <div class="plan-modal-head">
+      <div><div class="plan-modal-kicker" id="planModalKicker">90-day plan · Week 1</div><h2 id="planModalTitle">Build the control dataset</h2><p id="planModalSub">Days 1–7 · Diagnose</p></div>
+      <button class="plan-modal-close" id="planModalClose" aria-label="Close">×</button>
+    </div>
+    <div class="plan-modal-body" id="planModalBody"></div>
+  </div>
+</div>
+
+<div class="footer">Source: “The Smart Glasses Problem: A Program Management Case.” All displayed calculations are derived from case exhibits. Hypotheses and proposed interventions are explicitly labelled.</div>
 </main>
 </div>
 <script>
@@ -297,10 +745,6 @@ const tabs=[
 const nav=document.getElementById("nav"), tabbar=document.getElementById("tabs");
 tabs.forEach(([id,label],i)=>{let b=document.createElement("button");b.textContent=label;b.onclick=()=>show(id);if(i===0)b.className="active";nav.appendChild(b);let t=b.cloneNode(true);t.className="tab"+(i===0?" active":"");t.onclick=()=>show(id);tabbar.appendChild(t)});
 function show(id){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".nav button,.tab").forEach(x=>x.classList.remove("active"));[...document.querySelectorAll(".nav button,.tab")].forEach(x=>{if(x.textContent===tabs.find(t=>t[0]===id)[1])x.classList.add("active")})}
-const weeks=Object.entries(D.weekly);
-function renderWeekly(metric){let vals=weeks.map(x=>x[1][metric]), max=Math.max(...vals);document.getElementById("weeklyBars").innerHTML=vals.map(v=>`<div class="barwrap"><div class="bar" style="height:${v/max*92}%"></div></div>`).join("");document.getElementById("weeklyAxis").innerHTML=weeks.map(x=>`<span>${x[0]}</span>`).join("")}
-document.getElementById("metricSelect").onchange=e=>renderWeekly(e.target.value);renderWeekly("demos");
-document.getElementById("weeklyTable").innerHTML=weeks.map(([w,x])=>`<tr><td>${w}</td><td>${x.deployed}</td><td>${x.attendance}%</td><td>${x.training}%</td><td>${x.demos.toLocaleString()}</td><td>${x.enquiries}</td><td>${x.activations}</td><td>${x.units}</td><td>₹${x.revenue}L</td><td>${x.complaints}</td></tr>`).join("");
 
 const demoPerDay=D.stores.map(s=>s[5]/s[4]), conv=D.stores.map(s=>s[7]/s[5]*100), avgX=demoPerDay.reduce((a,b)=>a+b,0)/demoPerDay.length, avgY=conv.reduce((a,b)=>a+b,0)/conv.length;
 function renderStores(){let city=document.getElementById("cityFilter").value,q=document.getElementById("storeSearch").value.toLowerCase();let arr=D.stores.map((s,i)=>({...s,i,x:demoPerDay[i],y:conv[i]})).filter(s=>(city==="All"||s[1]===city)&&[s[0],s[1],s[2]].join(" ").toLowerCase().includes(q));document.getElementById("storeTable").innerHTML=arr.map(s=>`<tr><td>${s[0]}</td><td>${s[1]}</td><td>${s[2]}</td><td>${s[3]}</td><td>${s[4]}</td><td>${s[5]}</td><td>${s[6]}</td><td>${s[7]}</td><td>₹${s[8].toLocaleString()}</td><td>${s[9]}</td><td>${s.y.toFixed(1)}%</td></tr>`).join("");document.querySelectorAll(".pt").forEach(x=>x.remove());arr.forEach(s=>{let p=document.createElement("div");p.className="pt";p.textContent=s[0];p.style.left=Math.min(96,Math.max(4,(s.x/(avgX*1.75))*100))+"%";p.style.bottom=Math.min(96,Math.max(5,(s.y/(avgY*1.7))*100))+"%";p.onclick=()=>{document.getElementById("storeInfo").innerHTML=`<b>${s[0]} · ${s[1]} · ${s[2]}</b><br>Footfall: ${s[3]} · Present days: ${s[4]} · Demos: ${s[5]} · Enquiries: ${s[6]} · Units: ${s[7]} · Demo→sale: ${s.y.toFixed(1)}% · Rating: ${s[9]}`};document.getElementById("matrix").appendChild(p)})}
@@ -311,6 +755,69 @@ document.getElementById("promoterTable").innerHTML=D.promoters.map(p=>`<tr><td>$
 
 const counts={};D.feedback.forEach(x=>counts[x[1]]=(counts[x[1]]||0)+1);const total=D.feedback.length;document.getElementById("themes").innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="theme"><b>${k}</b><span>${v}/${total} examples</span></div>`).join("");
 document.getElementById("recruitTable").innerHTML=D.recruit.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${(r[4]/r[1]*100).toFixed(1)}%</td></tr>`).join("");
+
+function storySlide(n){
+  document.querySelectorAll(".story-slide").forEach(s=>s.classList.remove("active"));
+  const target=document.getElementById("story"+n);
+  if(target) target.classList.add("active");
+  document.querySelectorAll(".story-tab").forEach((b,i)=>b.classList.toggle("active",i===n-1));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+</script>
+
+<script>
+(function(){
+  const W = {
+1:["DIAGNOSE","Days 1–7","Build the control dataset","Create the missing operating view that connects promoter, store, week and customer-funnel outcomes.",["Create a promoter × store × week master file.","Clean and reconcile the store, promoter and weekly data fields available in the case.","Add fields to capture store referrals, reason-coded objections and return-visit outcomes.","Define consistent calculations for demo → enquiry, enquiry → activation, demo → sale and enquiry → sale."],["Operating dataset structure","Metric definitions","Required data-capture fields"],["Data completeness","Promoter–store linkage coverage","Weekly funnel capture rate"],"Can we explain what happened at a store, with a specific promoter, in a specific week?"],
+2:["DIAGNOSE","Days 8–14","Diagnose the store funnel","Separate an activity constraint from a conversion constraint.",["Calculate demonstrations per promoter-present day.","Calculate demo → enquiry, enquiry → sale and demo → sale.","Segment stores into activity/conversion situations.","Flag stores where activity and conversion point in different directions."],["Store diagnostic matrix","Priority stores","Initial hypotheses"],["Demos / promoter-present day","Demo → enquiry","Enquiry → sale","Demo → sale"],"For each priority store, do we know which part of the funnel needs to be tested?"],
+3:["DIAGNOSE","Days 15–21","Decode customer voice","Turn qualitative feedback into structured, testable hypotheses rather than treating comments as proven causes.",["Code the available feedback into consistent themes.","Separate category clarity, product objections, store execution, promoter execution and purchase hesitation.","Map recurring themes against store-level funnel performance where data permits.","Identify themes to test during the pilot."],["Feedback taxonomy","Theme frequency view","Testable hypothesis shortlist"],["Feedback items coded","Recurring themes","Hypotheses linked to funnel metrics"],"Which customer frictions are common enough and measurable enough to test?"],
+4:["DIAGNOSE","Days 22–30","Set store diagnostic profiles","Translate the first 30 days into a specific intervention hypothesis for each priority store.",["Review store activity, conversion and feedback together.","Document the primary constraint to test for each priority store.","Identify high-conversion practices worth observing.","Prepare the baseline for pilot comparison."],["Store diagnostic profiles","Pilot store shortlist","Day-30 baseline"],["Stores profiled","Baseline completeness","Priority stores selected"],"Are we clear on what intervention each pilot store is testing?"],
+5:["PILOT","Days 31–37","Design the pilot","Set up a controlled test where each intervention is matched to a diagnosed constraint.",["Select stores representing different diagnostic situations.","Assign one primary intervention hypothesis to each situation.","Define baseline, measurement window and success indicators.","Brief field and store stakeholders."],["Pilot design","Store/intervention map","Baseline KPI sheet"],["Pilot stores confirmed","Baseline metrics captured","Adherence definition"],"Can we distinguish intervention effects from normal week-to-week movement?"],
+6:["PILOT","Days 38–44","Launch use-case-led demonstrations","Test whether a clearer, customer-use-case-led demonstration improves engagement and conversion.",["Standardise identify → qualify → demonstrate → resolve concern → ask.","Reduce unnecessary feature-by-feature explanation.","Capture demo → enquiry and demo → sale at pilot-store level.","Collect qualitative observations."],["Pilot demo structure","Weekly pilot readout","Customer-response observations"],["Demo → enquiry","Demo → sale","Units / promoter-present day"],"Does the revised demo structure improve the relevant funnel metric versus baseline?"],
+7:["PILOT","Days 45–51","Test objection handling","Test whether consistent responses to recurring purchase concerns reduce conversion friction.",["Build a response guide around price, privacy, prescription and comparison concerns surfaced in the case.","Train participating promoters.","Record objection type when it occurs.","Compare enquiry → sale and demo → sale with baseline."],["Objection-handling guide","Reason-coded objection log","Pilot conversion readout"],["Objection frequency","Enquiry → sale","Demo → sale"],"Which objections appear associated with conversion leakage, and does the intervention change that pattern?"],
+8:["PILOT","Days 52–60","Enable store teams","Test whether stronger store-team referral and product understanding increase qualified customer opportunities.",["Give store staff a concise product/referral briefing.","Define when and how staff should refer customers.","Track store referrals separately.","Measure referral → demo and referral → sale where feasible."],["Store-team briefing","Referral process","Pilot referral dashboard"],["Store referrals","Referral → demo","Referral → sale","Demo volume"],"Is store referral a meaningful lever in stores where activity is constrained?"],
+9:["SCALE","Days 61–67","Mid-pilot review","Compare pilot performance with the Day-30 baseline and decide what needs adjustment.",["Review every intervention against its predefined metric.","Separate activity changes from conversion-rate changes.","Document promoter and store-team feedback.","Stop, refine or continue interventions based on evidence."],["Mid-pilot evaluation","Intervention decision log","Refined test plan"],["Change vs baseline","Intervention adherence","Conversion movement"],"Which interventions have enough signal to continue?"],
+10:["SCALE","Days 68–74","Prepare scale decisions","Identify practices sufficiently supported to become repeatable operating standards.",["Compare results across relevant store situations.","Identify practices associated with stronger conversion.","Separate repeatable practices from context-specific observations.","Define remaining evidence requirements."],["Scale candidate list","Evidence summary","Remaining evidence gaps"],["Interventions with measurable signal","Repeatable improvement","Evidence gaps closed"],"What can responsibly be replicated, and what still needs testing?"],
+11:["SCALE","Days 75–81","Build the operating playbook","Turn validated practices into simple, repeatable standards.",["Document the validated demo structure.","Document pilot-supported objection handling.","Define the store-team referral routine.","Create a manager review template linking activity to conversion."],["Promoter playbook","Store-team guide","Manager review template"],["Playbook components","Stakeholder readiness","Standardised measurement"],"Can the validated practice be executed consistently?"],
+12:["SCALE","Days 82–88","Roll out and enable","Deploy evidence-backed practices where the diagnostic suggests they are relevant.",["Prioritise stores by diagnosed constraint.","Brief managers and promoters.","Continue the same funnel measures used in the pilot.","Monitor implementation consistency."],["Rollout plan","Enablement record","Post-rollout monitoring"],["Rollout coverage","Implementation adherence","Demo → sale","Enquiry → sale"],"Are validated practices being implemented consistently?"],
+13:["SCALE","Days 89–90","Final evaluation and capacity decision","Close the cycle with an evidence-based decision on what to scale, continue testing and where capacity may be justified.",["Compare Day-90 results with Day-30 baseline.","Summarise intervention evidence and limitations.","Classify interventions as scale, continue testing or stop.","Consider incremental capacity only where evidence indicates activity is constrained despite strong execution."],["Day-90 evaluation","Scale/continue/stop decisions","Evidence-based capacity recommendation"],["Change vs baseline","Conversion performance","Business output","Experience metrics"],"What should become standard practice, what needs more testing, and where—if anywhere—is additional capacity justified?"]
+  };
+  function esc(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  window.openPlanWeek=function(n){
+    const w=W[n]; if(!w) return;
+    const modal=document.getElementById('planModal'); if(!modal) return;
+    document.getElementById('planModalKicker').textContent=`90-DAY PLAN · WEEK ${String(n).padStart(2,'0')} · ${w[0]}`;
+    document.getElementById('planModalTitle').textContent=w[2];
+    document.getElementById('planModalSub').textContent=`${w[1]} · ${w[0].charAt(0)+w[0].slice(1).toLowerCase()}`;
+    document.getElementById('planModalBody').innerHTML=`
+      <div class="plan-modal-summary"><b>WEEKLY OBJECTIVE</b><p>${esc(w[3])}</p></div>
+      <div class="plan-detail-grid">
+        <div class="plan-detail-card"><h3>What happens this week</h3><ul>${w[4].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+        <div class="plan-detail-card"><h3>Expected outputs</h3><ul>${w[5].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+        <div class="plan-detail-card"><h3>Measures</h3><ul>${w[6].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+        <div class="plan-detail-card"><h3>Proposed ownership</h3><p><b>Primary:</b> Program Manager<br><b>Execution:</b> Field / promoter team<br><b>Store support:</b> Store manager<br><b>Governance:</b> Client + program leadership</p></div><div class="plan-detail-card"><h3>Management principle</h3><p>Use the same measurement logic before and after the intervention. A movement in a KPI should be treated as evidence to investigate, not automatically as proof of causality.</p></div>
+      </div>
+      <div class="plan-deliverable"><h3>END-OF-WEEK DELIVERABLE</h3><p>${w[5].map(esc).join(' · ')}</p></div>
+      <div class="plan-gate"><b>DECISION GATE</b><p>${esc(w[7])}</p></div>`;
+    modal.classList.add('open'); document.body.style.overflow='hidden';
+  };
+  window.closePlanWeek=function(){const m=document.getElementById('planModal');if(m)m.classList.remove('open');document.body.style.overflow='';};
+  // Delegated click handler makes the cards work even if inline handlers are blocked.
+  document.addEventListener('click',function(e){const card=e.target.closest('.week-card');if(card){const m=card.getAttribute('data-plan-week');if(m)window.openPlanWeek(Number(m));}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')window.closePlanWeek();});
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.week-card[onclick]').forEach((el,i)=>{el.setAttribute('data-plan-week',String(i+1));el.removeAttribute('onclick');});
+    const c=document.getElementById('planModalClose');if(c)c.addEventListener('click',window.closePlanWeek);
+    const m=document.getElementById('planModal');if(m)m.addEventListener('click',e=>{if(e.target===m)window.closePlanWeek();});
+  });
+  // If DOMContentLoaded has already fired, initialise immediately.
+  if(document.readyState!=='loading'){
+    document.querySelectorAll('.week-card[onclick]').forEach((el,i)=>{el.setAttribute('data-plan-week',String(i+1));el.removeAttribute('onclick');});
+    const c=document.getElementById('planModalClose');if(c)c.addEventListener('click',window.closePlanWeek);
+    const m=document.getElementById('planModal');if(m)m.addEventListener('click',e=>{if(e.target===m)window.closePlanWeek();});
+  }
+})();
 </script>
 </body>
 </html>
